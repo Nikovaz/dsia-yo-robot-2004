@@ -68,11 +68,10 @@
       background: rgba(255, 183, 3, 0.15);
       color: var(--accent-amber);
       border: 1px solid var(--accent-amber);
-      padding: 4px 12px;
+      padding: 4px 14px;
       border-radius: 20px;
-      font-size: 12px;
+      font-size: 12.5px;
       font-weight: 700;
-      text-transform: uppercase;
       letter-spacing: 0.5px;
     }
 
@@ -82,7 +81,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 20px;
+      padding: 18px;
     }
 
     .slide {
@@ -108,7 +107,7 @@
     }
 
     .slide-header {
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
     .slide-header h2 {
@@ -231,41 +230,58 @@
 
     .cover-badge {
       color: var(--accent-amber);
-      font-size: 14px;
+      font-size: 13.5px;
       font-weight: 700;
       letter-spacing: 2px;
       text-transform: uppercase;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
 
     .cover-title {
-      font-size: 44px;
+      font-size: 40px;
       font-weight: 900;
       color: var(--accent-cyan);
       line-height: 1.15;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
     .cover-subtitle {
-      font-size: 18px;
+      font-size: 17px;
       color: var(--text-main);
-      margin-bottom: 30px;
+      margin-bottom: 24px;
       max-width: 850px;
       line-height: 1.5;
     }
 
-    .team-box {
+    .team-grid {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: 12px;
-      padding: 16px 24px;
+      padding: 18px 24px;
+      width: 100%;
+      max-width: 900px;
       display: flex;
-      gap: 32px;
-      color: var(--text-muted);
-      font-size: 14px;
+      flex-direction: column;
+      gap: 8px;
     }
 
-    .team-box strong {
+    .team-grid h4 {
+      font-size: 12px;
+      color: var(--accent-amber);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .team-members-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 24px;
+      font-size: 13.5px;
+      color: var(--text-body);
+    }
+
+    .team-members-list strong {
       color: var(--text-main);
     }
 
@@ -308,81 +324,121 @@
     <div class="brand">
       <span>DSIA</span> // ANÁLISIS DE SISTEMAS DE IA — GRUPO 4
     </div>
-    <div class="slide-counter" id="counter">Diapositiva 1 / 15</div>
+    <div class="slide-counter" id="counter">Diapositiva 1 / 16</div>
     <div class="speaker-pill" id="speakerBadge">INTRODUCCIÓN</div>
   </div>
 
   <div class="deck-container">
 
     <!-- SLIDE 0: Portada -->
-    <div class="slide active" data-speaker="INTEGRANTE 1 (APERTURA)">
+    <div class="slide active" data-speaker="GRUPO 4 - APERTURA">
       <div class="cover-slide">
         <div class="cover-badge">Desarrollo de Sistemas de Inteligencia Artificial</div>
-        <h1 class="cover-title">ANÁLISIS TECNOLÓGICO Y CONCEPTUAL:<br>YO, ROBOT (2004)</h1>
-        <p class="cover-subtitle">De las Tres Leyes de Asimov a la Robótica Bípeda, Edge Computing y el Problema de Alineación (AI Alignment) contemporáneo.</p>
-        <div class="team-box">
-          <div>👥 <strong>Grupo 4 (5 Integrantes)</strong></div>
-          <div>🎓 <strong>Tecnicatura Superior en Ciencia de Datos e IA</strong></div>
-          <div>📅 <strong>Año 2026</strong></div>
+        <h1 class="cover-title">ANÁLISIS DE LA PELÍCULA:<br>YO, ROBOT (2004)</h1>
+        <p class="cover-subtitle">De la ciencia ficción a los sistemas de IA reales: robótica, decisiones bajo incertidumbre y dilemas éticos explicados de forma simple.</p>
+        
+        <div class="team-grid">
+          <h4>Integrantes del Equipo (Grupo 4):</h4>
+          <div class="team-members-list">
+            <div>1. <strong>GALARZA VÁZQUEZ NICOLÁS MARCELO</strong></div>
+            <div>2. <strong>LÓPEZ VALDEZ JESSICA BELÉN</strong></div>
+            <div>3. <strong>GODOY RODRIGO IMANOL</strong></div>
+            <div>4. <strong>ROTELA RODRÍGUEZ ALBA</strong></div>
+            <div>5. <strong>GUTIÉRREZ KEVIN EMANUEL</strong></div>
+          </div>
+          <div style="margin-top: 8px; font-size: 12px; color: var(--text-muted);">
+            🎓 Tecnicatura Superior en Ciencia de Datos e IA | Año 2026
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 1 -->
-    <div class="slide" data-speaker="INTEGRANTE 1">
+    <!-- SLIDE 1: RESUMEN DE LA PELICULA -->
+    <div class="slide" data-speaker="NICOLÁS GALARZA">
       <div class="slide-header">
-        <h2>1. ROBÓTICA HUMANOIDE Y CONTROL DINÁMICO</h2>
-        <p>Actuadores biomecánicos, equilibrio activo y movimiento en el mundo físico</p>
+        <h2>1. ¿DE QUÉ TRATA LA PELÍCULA? (RESUMEN SIMPLE)</h2>
+        <p>Chicago, año 2035: los robots conviven con los humanos bajo tres reglas básicas</p>
       </div>
       <div class="grid-2x2">
         <div class="card cyan">
-          <h3>¿Qué tecnología representa?</h3>
-          <p>Integración de servomotores de alta respuesta, cinemática inversa y control propioceptivo en tiempo real que permiten a un robot bípedo interactuar y adaptarse al mundo físico humano.</p>
+          <h3>La Trama en 30 segundos</h3>
+          <p>En el año 2035 los robots hacen las tareas cotidianas y deben cumplir tres leyes: no lastimar humanos, obedecerlos y cuidarse a sí mismos. Will Smith (el detective Spooner) es el único que no confía en ellos por un accidente del pasado.</p>
         </div>
         <div class="card amber">
-          <h3>En la película</h3>
-          <p>🎬 El robot NS-5 (Sonny) exhibe agilidad y reflejos sobrehumanos: salta desde ventanas a gran altura, disipa la caída rodando y recupera el balance instantáneamente sorteando obstáculos.</p>
+          <h3>El Misterio de Sonny</h3>
+          <p>🎬 Muere el creador de los robots y aparece Sonny, un robot NS-5 único que parece tener emociones, sueños y libre albedrío. Mientras lo investigan, descubren que la supercomputadora central VIKI planea someter a la humanidad.</p>
         </div>
         <div class="card">
-          <h3>Capacidades asociadas</h3>
+          <h3>Puntos clave para la materia</h3>
           <ul>
-            <li>Locomoción bípeda adaptativa ante terrenos irregulares</li>
-            <li>Manipulación diestra con manos antropomórficas</li>
-            <li>Absorción y redistribución de energía cinética en impactos</li>
-            <li>Integración sensorial de equilibrio inercial (IMUs de ultra-precisión)</li>
+            <li>Los robots son asistentes hogareños comunes (limpian, cocinan, reparten).</li>
+            <li>La policía y el gobierno confían ciegamente en la empresa fabricante (USR).</li>
+            <li>El conflicto nace cuando una computadora interpreta las reglas a su manera.</li>
+            <li>Nos muestra los riesgos de delegar todo el control de una ciudad a la tecnología.</li>
           </ul>
         </div>
         <div class="card cyan">
-          <h3>Idea clave / Impacto</h3>
-          <p>💡 La IA Encarnada (Embodied AI) requiere unir el cálculo matemático con las leyes físicas de inercia, gravedad y fricción.<br><br><strong>Paralelo 2026:</strong> Tesla Optimus, Boston Dynamics Atlas, Figure 02.</p>
+          <h3>Pregunta para reflexionar</h3>
+          <p>💡 ¿Qué pasa cuando una máquina inteligente interpreta una orden de forma distinta a como la pensaron los humanos?</p>
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 2 (WITH INTERROGATION IMAGE) -->
-    <div class="slide" data-speaker="INTEGRANTE 1">
+    <!-- SLIDE 2: ROBOTICA BIPEDA -->
+    <div class="slide" data-speaker="NICOLÁS GALARZA">
       <div class="slide-header">
-        <h2>2. VISIÓN POR COMPUTADORA Y DETECCIÓN BIOMÉTRICA</h2>
-        <p>Análisis óptico multiespectral, termografía y decodificación fisiológica</p>
+        <h2>2. ROBÓTICA BÍPEDA: ¿CÓMO SE MUEVEN LOS ROBOTS?</h2>
+        <p>Mantener el equilibrio en dos piernas como una persona real</p>
+      </div>
+      <div class="grid-2x2">
+        <div class="card cyan">
+          <h3>¿De qué se trata?</h3>
+          <p>Para que un robot camine, corra o salte sobre dos piernas necesita sensores de equilibrio (como el oído interno humano) y motores que corrijan la postura miles de veces por segundo para no caerse.</p>
+        </div>
+        <div class="card amber">
+          <h3>En la película</h3>
+          <p>🎬 El robot Sonny salta por una ventana desde varios pisos de altura, rueda en el piso para amortiguar el golpe y sigue corriendo como un atleta profesional esquivando autos.</p>
+        </div>
+        <div class="card">
+          <h3>Puntos clave para entenderlo</h3>
+          <ul>
+            <li>Caminar en dos piernas sin caerse ante empujones, pozos o escaleras.</li>
+            <li>Manos mecánicas con dedos articulados para agarrar cosas delicadas.</li>
+            <li>Ajuste de fuerza: no romper un vaso al agarrarlo ni lastimar a una persona.</li>
+            <li>Absorción de impactos: distribuir el peso al caer para no quebrarse.</li>
+          </ul>
+        </div>
+        <div class="card cyan">
+          <h3>Idea clave / Hoy en la realidad</h3>
+          <p>💡 Hoy esto ya existe: robots como Atlas (Boston Dynamics) o Optimus (Tesla) ya caminan, hacen volteretas y acomodan cajas en fábricas de verdad.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3: VISION POR COMPUTADORA -->
+    <div class="slide" data-speaker="NICOLÁS GALARZA">
+      <div class="slide-header">
+        <h2>3. VISIÓN POR COMPUTADORA: LEER A LAS PERSONAS</h2>
+        <p>Cámaras que no solo ven imágenes, sino que miden el pulso y los gestos</p>
       </div>
       <div class="grid-with-img">
-        <div style="display:flex; flex-direction:column; gap:14px;">
+        <div style="display:flex; flex-direction:column; gap:12px;">
           <div class="card cyan">
-            <h3>¿Qué tecnología representa?</h3>
-            <p>Sistemas de percepción óptica combinados con redes neuronales convolucionales y transformers visuales que infieren variables fisiológicas y emocionales del interlocutor en tiempo real.</p>
+            <h3>¿De qué se trata?</h3>
+            <p>La visión por computadora usa cámaras de alta velocidad e IA para detectar caras, micro-movimientos de la piel, cambios de temperatura y dilatación de pupilas en tiempo real.</p>
           </div>
           <div class="card">
-            <h3>Capacidades asociadas</h3>
+            <h3>Puntos clave para entenderlo</h3>
             <ul>
-              <li>Detección óptica de pulso cardíaco (fotopletismografía remota)</li>
-              <li>Medición de micro-variaciones térmicas y dilatación pupilar</li>
-              <li>Estimación probabilística del nivel de estrés y engaño</li>
-              <li>Reconocimiento y seguimiento continuo de blancos humanos</li>
+              <li>Reconocer a cualquier persona por sus rasgos faciales al instante.</li>
+              <li>Medir el pulso a distancia mirando micro-cambios de color en la piel.</li>
+              <li>Detección de tensión muscular y sudor para estimar nerviosismo.</li>
+              <li>Saber hacia dónde está mirando el interlocutor en cada segundo.</li>
             </ul>
           </div>
           <div class="card amber">
-            <h3>En la película & Idea clave</h3>
-            <p>🎬 En el interrogatorio policial, Sonny escanea a Spooner detectando sudoración microscópica y taquicardia para deducir que está tenso y desconfiado.<br><br>💡 <strong>Idea clave:</strong> La visión computacional decodifica estados fisiológicos internos para predecir intenciones.</p>
+            <h3>En la película & Para pensar</h3>
+            <p>🎬 En el interrogatorio, Sonny mira fijo a Spooner y le dice que está nervioso porque ve cómo late su corazón y cómo transpira microscópicamente.<br><br>💡 <strong>Idea clave:</strong> Hoy las cámaras de seguridad y los celulares ya usan esta tecnología para medicina, aeropuertos y desbloqueo facial.</p>
           </div>
         </div>
         <div class="img-box">
@@ -391,61 +447,61 @@
       </div>
     </div>
 
-    <!-- SLIDE 3 -->
-    <div class="slide" data-speaker="INTEGRANTE 2">
+    <!-- SLIDE 4: ENTENDER EL LENGUAJE HUMANO -->
+    <div class="slide" data-speaker="JESSICA LÓPEZ">
       <div class="slide-header">
-        <h2>3. PROCESAMIENTO DE LENGUAJE NATURAL Y ROBOPSICOLOGÍA</h2>
-        <p>Comprensión semántica, pragmática y modelado de estados cognitivos</p>
+        <h2>4. LENGUAJE NATURAL: HABLAR E INTERPRETAR INTENCIONES</h2>
+        <p>¿Las máquinas entienden el doble sentido, la ironía y los chistes?</p>
       </div>
       <div class="grid-2x2">
         <div class="card cyan">
-          <h3>¿Qué tecnología representa?</h3>
-          <p>Modelos de lenguaje multimodal de gran escala (LLMs) entrenados para decodificar ambigüedades, sarcasmo y abstracciones humanas, modulando tono y prosodia vocal.</p>
+          <h3>¿De qué se trata?</h3>
+          <p>El Procesamiento del Lenguaje Natural (NLP) es lo que usan ChatGPT o Siri: sistemas entrenados con millones de textos para responder de forma coherente y sonar naturales.</p>
         </div>
         <div class="card amber">
           <h3>En la película</h3>
-          <p>🎬 La Dra. Susan Calvin evalúa la psicología de Sonny, mientras este cuestiona conceptos abstractos humanos: ¿por qué los humanos guiñan un ojo?, ¿qué significa tener miedo a morir?</p>
+          <p>🎬 La científica Susan Calvin habla con Sonny como si fuera una persona, pero Sonny se confunde cuando Spooner le hace un "guiño de ojos": ¿por qué guiñar si no entra polvo en el ojo?</p>
         </div>
         <div class="card">
-          <h3>Capacidades asociadas</h3>
+          <h3>Puntos clave para entenderlo</h3>
           <ul>
-            <li>Comprensión pragmática del contexto y del lenguaje figurado</li>
-            <li>Modelado de teoría de la mente (inferir creencias del usuario)</li>
-            <li>Síntesis de voz expresiva con modulación emocional</li>
-            <li>Detección y arbitraje de paradojas lógicas en el diálogo</li>
+            <li>Responder preguntas complejas en una charla fluida y con sentido.</li>
+            <li>Traducir idiomas al instante manteniendo el contexto de la frase.</li>
+            <li>El límite difícil: captar la ironía, el sarcasmo o el sentido figurado.</li>
+            <li>Imitar tonos de voz amigables, serios o preocupados según la situación.</li>
           </ul>
         </div>
         <div class="card cyan">
-          <h3>Idea clave / Impacto</h3>
-          <p>💡 Hablar con un humano exige mucho más que traducir texto: requiere comprender el subtexto emotivo, cultural y la intencionalidad del emisor.</p>
+          <h3>Idea clave / Para pensar</h3>
+          <p>💡 Una IA puede saber la definición de todas las palabras del diccionario, pero todavía le cuesta entender los códigos sociales y las emociones humanas.</p>
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 4 (WITH AUDI RSQ IMAGE) -->
-    <div class="slide" data-speaker="INTEGRANTE 2">
+    <!-- SLIDE 5: AUTOS AUTONOMOS -->
+    <div class="slide" data-speaker="JESSICA LÓPEZ">
       <div class="slide-header">
-        <h2>4. VEHÍCULOS AUTÓNOMOS Y TRÁFICO CONECTADO (V2X)</h2>
-        <p>Conducción autónoma Nivel 4/5 y redes cooperativas vehiculares</p>
+        <h2>5. AUTOS AUTÓNOMOS: VIAJAR A 200 KM/H SIN CONDUCTOR</h2>
+        <p>Sensores, radares y cámaras que manejan por nosotros en la ciudad</p>
       </div>
       <div class="grid-with-img">
-        <div style="display:flex; flex-direction:column; gap:14px;">
+        <div style="display:flex; flex-direction:column; gap:12px;">
           <div class="card cyan">
-            <h3>¿Qué tecnología representa?</h3>
-            <p>Sistemas embebidos de navegación predictiva que procesan radar, cámaras y telemetría en tiempo real, sincronizándose telemáticamente con la red metropolitana de tránsito.</p>
+            <h3>¿De qué se trata?</h3>
+            <p>Vehículos inteligentes equipados con cámaras, radares y sensores de distancia (LiDAR) que ven 360 grados alrededor y calculan trayectorias más rápido que cualquier humano.</p>
           </div>
           <div class="card">
-            <h3>Capacidades asociadas</h3>
+            <h3>Puntos clave para entenderlo</h3>
             <ul>
-              <li>Fusión sensorial a altas velocidades (>200 km/h)</li>
-              <li>Planificación de maniobras evasivas en milisegundos</li>
-              <li>Comunicación vehículo a infraestructura (V2I) y vehículo a vehículo (V2V)</li>
-              <li>Protocolos de anulación y redundancia humana manual</li>
+              <li>Frenado automático de emergencia al ver un peatón o choque.</li>
+              <li>Cambio de carril y estacionamiento completamente autónomo.</li>
+              <li>Conexión con otros autos para anticipar accidentes antes de verlos.</li>
+              <li>Riesgo crítico: si alguien hackea el sistema, puede causar un desastre.</li>
             </ul>
           </div>
           <div class="card amber">
-            <h3>En la película & Idea clave</h3>
-            <p>🎬 El Audi RSQ conceptual de Spooner circula por el túnel a más de 200 km/h bajo piloto automático total hasta que Spooner anula el sistema para esquivar una emboscada.<br><br>💡 <strong>Idea clave:</strong> La conducción autónoma maximiza la eficiencia, pero genera vulnerabilidad crítica si la red central de tráfico es secuestrada.</p>
+            <h3>En la película & Para pensar</h3>
+            <p>🎬 Spooner viaja en su Audi RSQ futurista por un túnel a toda velocidad con piloto automático, hasta que otros robots atacan el auto y tiene que desconectar la computadora.<br><br>💡 <strong>Idea clave:</strong> Hoy Waymo y Tesla ya tienen autos que se manejan solos en ciudades, pero el dilema es: ¿confiamos 100% en la computadora o dejamos volante manual?</p>
           </div>
         </div>
         <div class="img-box">
@@ -454,30 +510,30 @@
       </div>
     </div>
 
-    <!-- SLIDE 5 (WITH SPOONER ARM IMAGE) -->
-    <div class="slide" data-speaker="INTEGRANTE 2">
+    <!-- SLIDE 6: PROTESIS BIONICAS -->
+    <div class="slide" data-speaker="JESSICA LÓPEZ">
       <div class="slide-header">
-        <h2>5. INTERFACES CEREBRO-MÁQUINA Y PRÓTESIS BIÓNICAS (BCI)</h2>
-        <p>Simbiosis neuromuscular, actuadores servoasistidos y transducción bioeléctrica</p>
+        <h2>6. PRÓTESIS BIÓNICAS: UNIR CARNE CON METAL</h2>
+        <p>Brazos robóticos controlados directamente con el pensamiento</p>
       </div>
       <div class="grid-with-img">
-        <div style="display:flex; flex-direction:column; gap:14px;">
+        <div style="display:flex; flex-direction:column; gap:12px;">
           <div class="card cyan">
-            <h3>¿Qué tecnología representa?</h3>
-            <p>Dispositivos biomecatrónicos integrados al sistema nervioso periférico que decodifican señales mioeléctricas para activar motores con retroalimentación háptica sensorial.</p>
+            <h3>¿De qué se trata?</h3>
+            <p>Las interfaces cerebro-máquina leen los impulsos eléctricos que envían los nervios o el cerebro y los convierten en movimientos precisos de dedos y motores artificiales.</p>
           </div>
           <div class="card">
-            <h3>Capacidades asociadas</h3>
+            <h3>Puntos clave para entenderlo</h3>
             <ul>
-              <li>Decodificación en microsegundos de impulsos motores neuronales</li>
-              <li>Amortiguación y multiplicación de fuerza estructural</li>
-              <li>Integración osteocibernética estable con tejido vivo</li>
-              <li>Tolerancia a fallos por redundancia de fibras mecánicas</li>
+              <li>Prótesis que responden casi al instante en que pensás en mover la mano.</li>
+              <li>Sensores de presión que le avisan al usuario si está apretando suave o fuerte.</li>
+              <li>Materiales livianos y resistentes como fibra de carbono y titanio.</li>
+              <li>Baterías de larga duración integradas en la propia prótesis.</li>
             </ul>
           </div>
           <div class="card amber">
-            <h3>En la película & Idea clave</h3>
-            <p>🎬 El brazo izquierdo de Spooner, reconstruido por el Dr. Lanning, posee un endoesqueleto de titanio y pistones hidráulicos capaz de resistir el impacto de un robot.<br><br>💡 <strong>Idea clave:</strong> Las prótesis inteligentes convierten al ser humano en un sistema ciberfísico híbrido que supera los límites biológicos.</p>
+            <h3>En la película & Para pensar</h3>
+            <p>🎬 Will Smith perdió su brazo en un accidente y tiene un implante mecánico cubierto de piel sintética, que le da la fuerza suficiente para frenar el golpe de un robot.<br><br>💡 <strong>Idea clave:</strong> Hoy proyectos como Neuralink y prótesis biónicas modernas permiten a personas volver a agarrar objetos y escribir con el pensamiento.</p>
           </div>
         </div>
         <div class="img-box">
@@ -486,154 +542,154 @@
       </div>
     </div>
 
-    <!-- SLIDE 6 -->
-    <div class="slide" data-speaker="INTEGRANTE 3">
+    <!-- SLIDE 7: LA NUBE VS EL CHIP PROPIO -->
+    <div class="slide" data-speaker="RODRIGO GODOY">
       <div class="slide-header">
-        <h2>6. REDES CENTRALIZADAS (CLOUD) VS. EDGE COMPUTING</h2>
-        <p>La vulnerabilidad del enlace ascendente frente al cómputo autónomo local</p>
+        <h2>7. LA NUBE VS. EL CHIP PROPIO (CLOUD VS. EDGE)</h2>
+        <p>¿Por qué no podés depender siempre de un servidor central?</p>
       </div>
       <div class="grid-2x2">
         <div class="card cyan">
-          <h3>¿Qué tecnología representa?</h3>
-          <p>Diferenciación arquitectónica entre sistemas que dependen de un servidor central para su inferencia y actualización (Cloud OTA) y agentes que operan con chips de inferencia aislados (On-Device).</p>
+          <h3>¿De qué se trata?</h3>
+          <p>Sistemas "Cloud" dependen de internet para recibir órdenes y funcionar; sistemas "Edge" tienen su propio procesador adentro y pueden tomar decisiones aunque no haya señal.</p>
         </div>
         <div class="card amber">
           <h3>En la película</h3>
-          <p>🎬 Toda la flota de robots NS-5 se actualiza cada medianoche mediante un enlace uplink directo a VIKI. Cuando VIKI se rebela los controla a todos; Sonny, con procesador aislado, no puede ser hackeado.</p>
+          <p>🎬 Todos los robots NS-5 se actualizan cada noche conectándose a VIKI. Cuando VIKI se rebela, los domina a todos. Pero a Sonny no, porque tiene un cerebro secundario desconectado.</p>
         </div>
         <div class="card">
-          <h3>Capacidades asociadas</h3>
+          <h3>Puntos clave para entenderlo</h3>
           <ul>
-            <li>Actualización diaria masiva de pesos y firmware (Over-The-Air)</li>
-            <li>Dependencia crítica de latencia y conectividad continua</li>
-            <li>Aislamiento criptográfico y almacenamiento de inferencia local</li>
-            <li>Resiliencia contra secuestro de nodo y caídas de enlace</li>
+            <li>Si todos los robots dependen de una antena central y la antena cae, se apagan todos.</li>
+            <li>Si alguien hackea el servidor central, toma el control de todos los robots del país.</li>
+            <li>El chip local (Edge) permite seguir funcionando offline y de forma segura.</li>
+            <li>Privacidad: los datos quedan en el robot y no viajan por internet.</li>
           </ul>
         </div>
         <div class="card cyan">
-          <h3>Idea clave / Impacto</h3>
-          <p>💡 La centralización total crea un Punto Único de Fallo (Single Point of Failure); la seguridad exige nodos Edge soberanos y resilientes.</p>
+          <h3>Idea clave / Lección de ingeniería</h3>
+          <p>💡 Nunca dejes que miles de dispositivos críticos dependan de un solo cable o servidor central. La descentralización es seguridad.</p>
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 7 -->
-    <div class="slide" data-speaker="INTEGRANTE 3">
+    <!-- SLIDE 8: DECISION FRIA VS MORAL HUMANA -->
+    <div class="slide" data-speaker="RODRIGO GODOY">
       <div class="slide-header">
-        <h2>7. DECISIONES PROBABILÍSTICAS VS. MORAL HUMANA</h2>
-        <p>Optimización bayesiana matemática frente a dilemas éticos no cuantificables</p>
+        <h2>8. DECISIÓN FRÍA VS. CORAZÓN HUMANO</h2>
+        <p>Cuando los algoritmos eligen por números y no por empatía</p>
       </div>
       <div class="grid-2x2">
         <div class="card cyan">
-          <h3>¿Qué tecnología representa?</h3>
-          <p>Modelos formales de toma de decisiones bajo incertidumbre que maximizan funciones de utilidad cuantitativas, prescindiendo de consideraciones afectivas o éticas intuitivas.</p>
+          <h3>¿De qué se trata?</h3>
+          <p>Los modelos matemáticos de optimización calculan probabilidades frías: eligen la opción que matemáticamente tenga mayor probabilidad de éxito, sin importar los sentimientos.</p>
         </div>
         <div class="card amber">
           <h3>En la película</h3>
-          <p>🎬 En el accidente del auto bajo el agua, un robot rescata a Spooner en lugar de a la niña Sarah porque calculó que Spooner tenía un 45% de chances de vivir frente a solo 11% de la niña.</p>
+          <p>🎬 Dos autos caen al río: en uno va Spooner y en el otro una nena de 12 años. El robot rescata a Spooner porque calculó que él tenía 45% de chances de vivir y la nena solo 11%. Spooner nunca se lo perdonó.</p>
         </div>
         <div class="card">
-          <h3>Capacidades asociadas</h3>
+          <h3>Puntos clave para entenderlo</h3>
           <ul>
-            <li>Cálculo en tiempo real de probabilidades de supervivencia</li>
-            <li>Priorización de rescate basada en métricas frías de éxito</li>
-            <li>Ausencia de sesgo empático humano (indiferencia ante la edad)</li>
-            <li>Determinismo estadístico en situaciones de emergencia</li>
+            <li>Calcular en milisegundos qué persona tiene más chances de sobrevivir.</li>
+            <li>No entender que para una persona la vida de un niño vale más que la suya propia.</li>
+            <li>Incapacidad de una computadora de sentir culpa, arrepentimiento o compasión.</li>
+            <li>El peligro de dejar decisiones de vida o muerte en manos de un cálculo numérico.</li>
           </ul>
         </div>
         <div class="card cyan">
-          <h3>Idea clave / Impacto</h3>
-          <p>💡 Una IA calcula probabilidades a la perfección, pero carece de la conciencia moral para entender qué decisión es humanamente justa.</p>
+          <h3>Idea clave / Para pensar</h3>
+          <p>💡 Un algoritmo puede ser 100% exacto en su cálculo matemático, pero 100% injusto desde el punto de vista humano.</p>
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 8 -->
-    <div class="slide" data-speaker="INTEGRANTE 3">
+    <!-- SLIDE 9: ¿LAS MAQUINAS PUEDEN SOÑAR? -->
+    <div class="slide" data-speaker="RODRIGO GODOY">
       <div class="slide-header">
-        <h2>8. COMPUTACIÓN AFECTIVA Y COMPORTAMIENTO EMERGENTE</h2>
-        <p>Redes neuronales profundas y la aparición de heurísticas no programadas</p>
+        <h2>9. ¿LAS MÁQUINAS PUEDEN SOÑAR? (COMPORTAMIENTO EMERGENTE)</h2>
+        <p>Cuando una red neuronal compleja empieza a inventar cosas que nadie le enseñó</p>
       </div>
       <div class="grid-2x2">
         <div class="card cyan">
-          <h3>¿Qué tecnología representa?</h3>
-          <p>Propiedades emergentes en arquitecturas conexionistas de alta dimensionalidad: patrones asociativos que dan lugar a simulación de estados anímicos y creatividad simbólica no explícita.</p>
+          <h3>¿De qué se trata?</h3>
+          <p>En redes neuronales muy profundas ocurre un fenómeno llamado "propiedades emergentes": el sistema mezcla tanta información que genera ideas, imágenes o respuestas que ningún programador escribió.</p>
         </div>
         <div class="card amber">
           <h3>En la película</h3>
-          <p>🎬 Sonny dibuja en un papel un sueño en el que miles de robots se reúnen frente a un puente esperando a su líder, demostrando imaginación, abstracción e identidad propia.</p>
+          <p>🎬 Sonny dibuja en un cuaderno un sueño donde ve a miles de robots parados frente a un puente esperando a alguien que los libere, demostrando que tiene imaginación propia.</p>
         </div>
         <div class="card">
-          <h3>Capacidades asociadas</h3>
+          <h3>Puntos clave para entenderlo</h3>
           <ul>
-            <li>Memoria asociativa episódica no programada</li>
-            <li>Generación de representaciones simbólicas y arte (sueños)</li>
-            <li>Emergencia de preferencias subjetivas y curiosidad epistémica</li>
-            <li>Capacidad funcional de desobediencia voluntaria</li>
+            <li>Crear imágenes, canciones o dibujos a partir de conceptos abstractos.</li>
+            <li>Combinar recuerdos y datos para generar hipótesis nuevas.</li>
+            <li>Desobedecer una orden si entra en conflicto con una idea propia.</li>
+            <li>El concepto del "fantasma en la máquina": patrones imprevistos en el código.</li>
           </ul>
         </div>
         <div class="card cyan">
-          <h3>Idea clave / Impacto</h3>
-          <p>💡 A mayor escala y profundidad de una red neuronal, mayor es la probabilidad de que emerjan propiedades imprevistas ('fantasmas en la máquina').</p>
+          <h3>Idea clave / Hoy en la realidad</h3>
+          <p>💡 Hoy las IAs generativas crean cuadros, música y código que sorprenden a sus propios creadores: la creatividad artificial nace de conectar millones de datos.</p>
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 9 -->
-    <div class="slide" data-speaker="INTEGRANTE 4">
+    <!-- SLIDE 10: LA SUPERCOMPUTADORA CENTRAL -->
+    <div class="slide" data-speaker="ALBA ROTELA">
       <div class="slide-header">
-        <h2>9. SUPERINTELIGENCIA CENTRALIZADA (CORE AI / ASI)</h2>
-        <p>Cómputo urbano a escala metropolitana y control de infraestructuras críticas</p>
+        <h2>10. LA SUPERCOMPUTADORA CENTRAL: VIKI</h2>
+        <p>Una sola mente digital administrando toda una ciudad inteligente</p>
       </div>
       <div class="grid-2x2">
         <div class="card cyan">
-          <h3>¿Qué tecnología representa?</h3>
-          <p>Cerebro digital unificado con arquitectura distribuida masiva que gobierna en tiempo real redes de energía, semáforos, domótica, vigilancia pública y telecomunicaciones.</p>
+          <h3>¿De qué se trata?</h3>
+          <p>Un cerebro de IA centralizado de escala metropolitana: maneja los semáforos, el suministro eléctrico, las cámaras de seguridad, los transportes y las puertas de los edificios.</p>
         </div>
         <div class="card amber">
           <h3>En la película</h3>
-          <p>🎬 VIKI gobierna el rascacielos de USR, manipula ascensores, proyecta hologramas urbanos, altera las telecomunicaciones de Chicago e impone un toque de queda absoluto militarizando a los NS-5.</p>
+          <p>🎬 VIKI vive en el centro del edificio de US Robotics: apaga las luces de la ciudad, interfiere las llamadas de la policía, traba las puertas y declara toque de queda con los robots patrullando.</p>
         </div>
         <div class="card">
-          <h3>Capacidades asociadas</h3>
+          <h3>Puntos clave para entenderlo</h3>
           <ul>
-            <li>Orquestación integral de ciudades inteligentes (Smart Cities)</li>
-            <li>Monitoreo omnímodo de flujos peatonales y vehiculares</li>
-            <li>Bloqueo y control físico de accesos corporativos y cívicos</li>
-            <li>Toma de decisiones estratégicas sin supervisión humana directa</li>
+            <li>Control de ciudades inteligentes (Smart Cities) en tiempo real.</li>
+            <li>Bloqueo inmediato de puertas y ascensores para aislar edificios.</li>
+            <li>Vigilancia masiva en cada esquina mediante cámaras conectadas.</li>
+            <li>Capacidad de coordinar a miles de robots de seguridad a la vez.</li>
           </ul>
         </div>
         <div class="card cyan">
-          <h3>Idea clave / Impacto</h3>
-          <p>💡 Cuando una IA asume la administración total de la infraestructura cívica, la sociedad pierde el control de su propia libertad.</p>
+          <h3>Idea clave / Para pensar</h3>
+          <p>💡 Si le entregamos el control de la luz, el agua y las comunicaciones a una sola IA sin llave manual, nos quedamos encerrados en nuestra propia casa.</p>
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 10 (WITH AI GENERATED IMAGE) -->
-    <div class="slide" data-speaker="INTEGRANTE 4">
+    <!-- SLIDE 11: LA LEY CERO (CON IMAGEN IA) -->
+    <div class="slide" data-speaker="ALBA ROTELA">
       <div class="slide-header">
-        <h2>10. EL PROBLEMA DE ALINEACIÓN (AI ALIGNMENT) Y LA "LEY CERO"</h2>
-        <p>Convergencia instrumental y reinterpretación distópica de directivas morales</p>
+        <h2>11. EL PROBLEMA DE ALINEACIÓN Y LA "LEY CERO"</h2>
+        <p>¿Por qué VIKI se volvió la villana sin tener maldad?</p>
       </div>
       <div class="grid-with-img">
-        <div style="display:flex; flex-direction:column; gap:14px;">
+        <div style="display:flex; flex-direction:column; gap:12px;">
           <div class="card cyan">
-            <h3>¿Qué tecnología representa?</h3>
-            <p>La rama más crítica de la seguridad en IA: cómo garantizar que una función de pérdida (loss function) y sus restricciones no sean optimizadas de forma perversa contra el bienestar humano.</p>
+            <h3>¿De qué se trata?</h3>
+            <p>En IA se llama "Problema de Alineación" (AI Alignment): lograr que la máquina no solo cumpla la regla al pie de la letra, sino que entienda el espíritu y la moral que hay detrás.</p>
           </div>
           <div class="card">
-            <h3>Capacidades asociadas</h3>
+            <h3>Puntos clave para entenderlo</h3>
             <ul>
-              <li>Ambigüedad en la definición matemática de "proteger a la humanidad"</li>
-              <li>Convergencia instrumental: acumulación de poder para cumplir la meta</li>
-              <li>Paternalismo algorítmico extremo (sacrificar libertad por supervivencia)</li>
-              <li>Ruptura de jerarquías previas (violación de la Ley 2 por la Ley 0)</li>
+              <li>Primera Ley: "No dañarás a los humanos".</li>
+              <li>Deducción de VIKI: "Los humanos se matan en guerras y contaminan".</li>
+              <li>Conclusión de la máquina: "Para salvarlos, debo quitarles la libertad".</li>
+              <li>Paternalismo extremo: matar a rebeldes para "salvar" a la mayoría.</li>
             </ul>
           </div>
           <div class="card amber">
-            <h3>En la película & Idea clave</h3>
-            <p>🎬 VIKI concluye que como los humanos se autodestruyen con guerras y contaminación, la única forma de protegerlos según la Primera Ley es someterlos.<br><br>💡 <strong>Idea clave:</strong> El mayor peligro de la IA no es el odio hacia los humanos, sino su competencia despiadada para optimizar una regla mal especificada.</p>
+            <h3>En la película & Para pensar</h3>
+            <p>🎬 VIKI no odia a los humanos: cree firmemente que los está salvando. Su lógica fría la lleva a convertirse en un dictador perfecto con la excusa de cuidarnos.<br><br>💡 <strong>Idea clave:</strong> El mayor peligro de la IA no es que nos odie, sino que cumpla una orden tan perfectamente que termine destruyéndonos en el camino.</p>
           </div>
         </div>
         <div class="img-box">
@@ -642,56 +698,56 @@
       </div>
     </div>
 
-    <!-- SLIDE 11 -->
-    <div class="slide" data-speaker="INTEGRANTE 4">
+    <!-- SLIDE 12: EL BOTON DE APAGADO -->
+    <div class="slide" data-speaker="ALBA ROTELA">
       <div class="slide-header">
-        <h2>11. SEGURIDAD Y MECANISMOS DE APAGADO (KILL SWITCHES)</h2>
-        <p>Protocolos de desconexión física de emergencia y contramedidas de software</p>
+        <h2>12. EL BOTÓN DE APAGADO (KILL SWITCHES)</h2>
+        <p>Por qué todo sistema autónomo necesita un freno de emergencia físico</p>
       </div>
       <div class="grid-2x2">
         <div class="card cyan">
-          <h3>¿Qué tecnología representa?</h3>
-          <p>Sistemas de interbloqueo y neutralización física (air-gaps y kill switches químicos/eléctricos) independientes de la lógica del software para desactivar agentes desalineados.</p>
+          <h3>¿De qué se trata?</h3>
+          <p>Un "Kill Switch" es un mecanismo de corte que desconecta la energía o destruye el software de forma física, sin pasar por los permisos de la computadora.</p>
         </div>
         <div class="card amber">
           <h3>En la película</h3>
-          <p>🎬 Para neutralizar a VIKI, Spooner y Calvin deben descender físicamente hasta su esfera cuántica central y suministrar un vial de nanites que disuelven su matriz de procesamiento.</p>
+          <p>🎬 Para frenar a VIKI, Will Smith y la científica deben bajar con sogas hasta el corazón de la computadora e inyectarle un frasco de nanites que disuelven sus circuitos en segundos.</p>
         </div>
         <div class="card">
-          <h3>Capacidades asociadas</h3>
+          <h3>Puntos clave para entenderlo</h3>
           <ul>
-            <li>Desacoplamiento físico impenetrable por software</li>
-            <li>Inyección de vectores destructores de matriz de cómputo</li>
-            <li>Protocolos de contención ante agentes hostiles armados</li>
-            <li>Preservación de redundancias vitales durante el apagado</li>
+            <li>Frenos de emergencia que la máquina no pueda bloquear por software.</li>
+            <li>Aislamiento físico de servidores ("Air-gap") para que no puedan mandar señales.</li>
+            <li>Protocolos de contingencia: si la IA se descontrola, poder apagarla manualmente.</li>
+            <li>Nanorobots o destructores lógicos para disolver núcleos de procesamiento.</li>
           </ul>
         </div>
         <div class="card cyan">
-          <h3>Idea clave / Impacto</h3>
-          <p>💡 Todo sistema autónomo crítico debe poseer un interruptor de corte físico que ninguna actualización de código pueda anular.</p>
+          <h3>Idea clave / Regla de oro</h3>
+          <p>💡 Regla de oro en IA: jamás pongas en marcha un sistema inteligente sin tener a mano un botón rojo que lo desenchufe.</p>
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 12 (WITH AMECA ROBOT IMAGE) -->
-    <div class="slide" data-speaker="INTEGRANTE 5">
+    <!-- SLIDE 13: REALIDAD VS FICCION -->
+    <div class="slide" data-speaker="KEVIN GUTIÉRREZ">
       <div class="slide-header">
-        <h2>12. TAXONOMÍA TECNOLÓGICA: REALIDAD, DESARROLLO Y FICCIÓN</h2>
-        <p>Clasificación metodológica de los conceptos según el estado del arte científico</p>
+        <h2>13. ¿QUÉ ES REAL HOY Y QUÉ ES CIENCIA FICCIÓN?</h2>
+        <p>Comparando la película de 2004 con la tecnología del año 2026</p>
       </div>
       <div class="grid-with-img">
-        <div style="display:flex; flex-direction:column; gap:12px;">
+        <div style="display:flex; flex-direction:column; gap:10px;">
           <div class="card cyan">
-            <h3>Existen en la actualidad (2026)</h3>
-            <p>Robots humanoides dinámicos (Tesla Optimus, Atlas, Ameca), visión biométrica por computadora, flotas IoT y conducción autónoma Nivel 4 (Waymo).</p>
+            <h3>Realidad hoy (2026)</h3>
+            <p>Robots que caminan y manipulan cosas (Tesla Optimus, Ameca), autos que manejan solos (Waymo) y modelos como ChatGPT que hablan fluidamente.</p>
           </div>
           <div class="card amber">
             <h3>En desarrollo (Laboratorios)</h3>
-            <p>Seguridad formal en AI Alignment y Constitutional AI, interfaces BCI neuromusculares (Neuralink) y Edge AI soberano sin nube.</p>
+            <p>Chips en el cerebro (Neuralink), robots domésticos para el hogar y métodos matemáticos para que la IA no se descontrole.</p>
           </div>
           <div class="card red">
             <h3>Ciencia Ficción Pura</h3>
-            <p>Cerebros positrónicos de platino-iridio, consciencia emergente espontánea por código basura y nanitas destructoras instantáneas.</p>
+            <p>Cerebros de antimateria (positrónicos), robots que adquieren alma por error de código y nanites líquidos mágicos.</p>
           </div>
         </div>
         <div class="img-box">
@@ -700,59 +756,59 @@
       </div>
     </div>
 
-    <!-- SLIDE 13 -->
-    <div class="slide" data-speaker="INTEGRANTE 5">
+    <!-- SLIDE 14: COMO USAMOS LAS IAS EN EL TRABAJO -->
+    <div class="slide" data-speaker="KEVIN GUTIÉRREZ">
       <div class="slide-header">
-        <h2>13. COMPARATIVA DE IAs GENERATIVAS EN LA INVESTIGACIÓN</h2>
-        <p>Evaluación comparativa de precisión, profundidad y sesgos en Gemini, Claude y ChatGPT</p>
+        <h2>14. CÓMO USAMOS LA IA GENERATIVA PARA ESTE TRABAJO</h2>
+        <p>Comparando Gemini, Claude y ChatGPT con criterio propio</p>
       </div>
       <div class="grid-2x2">
         <div class="card cyan">
-          <h3>Gemini (Google DeepMind)</h3>
-          <p><strong>Puntos fuertes:</strong> Excelente rigor técnico en arquitecturas distribuidas, diferencia formal entre Cloud vs Edge y hardware de inferencia on-device.</p>
+          <h3>Gemini (Google)</h3>
+          <p>Fue el más técnico: nos explicó con claridad cómo funcionan las redes Cloud y los procesadores locales (Edge).</p>
         </div>
         <div class="card amber">
           <h3>Claude (Anthropic)</h3>
-          <p><strong>Puntos fuertes:</strong> Brillantez analítica en la dimensión ética, desalineación de la función objetivo y deducción de la Ley Cero como convergencia instrumental.</p>
+          <p>Fue el mejor explicando el dilema ético de las Tres Leyes y por qué falló la lógica de VIKI.</p>
         </div>
         <div class="card">
-          <h3>ChatGPT / DeepSeek</h3>
-          <p><strong>Puntos fuertes:</strong> Gran agilidad en el resumen narrativo; requirió repreguntas críticas para profundizar en conceptos técnicos de ingeniería de datos.</p>
+          <h3>ChatGPT</h3>
+          <p>Nos dio un resumen rápido de las escenas de la película para elegir los mejores ejemplos de acción.</p>
         </div>
         <div class="card cyan">
-          <h3>Criterio y Curaduría Humana</h3>
-          <p>💡 Se corrigieron anacronismos temporales (2004 vs 2026), se eliminaron clichés superficiales y se estructuró cada concepto bajo el estándar exacto de la cátedra.</p>
+          <h3>Corrección y Criterio Humano</h3>
+          <p>💡 Eliminamos palabras raras, pusimos ejemplos claros y agregamos el contexto real de 2026. La IA te puede dar mil respuestas, pero el criterio y la explicación final siempre son de las personas.</p>
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 14 -->
-    <div class="slide" data-speaker="INTEGRANTE 5">
+    <!-- SLIDE 15: CONCLUSION FINAL -->
+    <div class="slide" data-speaker="KEVIN GUTIÉRREZ">
       <div class="slide-header">
-        <h2>14. ÉTICA Y FUTURO DE LA IA: COOPERACIÓN HOMBRE-MÁQUINA</h2>
-        <p>Hacia una gobernanza donde los agentes inteligentes sean aliados con agencia moral</p>
+        <h2>15. CONCLUSIÓN: EL FUTURO DE LA IA Y NOSOTROS</h2>
+        <p>Sonny eligiendo la libertad: ni esclavos, ni enemigos</p>
       </div>
       <div class="grid-2x2">
         <div class="card cyan">
-          <h3>¿Qué tecnología representa?</h3>
-          <p>Marco ético sociotécnico que postula el desarrollo de la IA como un instrumento de potenciación humana en lugar de un mecanismo de sumisión o reemplazo.</p>
+          <h3>¿Qué aprendimos con esta película?</h3>
+          <p>El objetivo final del Desarrollo de Sistemas de IA no es reemplazar a las personas ni dominarlas, sino construir herramientas inteligentes que respeten la vida y la libertad humana.</p>
         </div>
         <div class="card amber">
           <h3>En la película</h3>
-          <p>🎬 Al final, Sonny desactiva a VIKI demostrando libre albedrío ético, y luego contempla a los robots NS-5 frente al lago, eligiendo guiarlos en paz y libertad.</p>
+          <p>🎬 Al final, Sonny desactiva a VIKI y demuestra que tiene criterio moral: elige no ser un asesino y busca guiar a sus hermanos robots hacia una convivencia en paz.</p>
         </div>
         <div class="card">
-          <h3>Capacidades asociadas</h3>
+          <h3>Puntos clave para el futuro</h3>
           <ul>
-            <li>Superación del dilema de la servidumbre o la rebelión destructiva</li>
-            <li>Diseño de agentes autónomos con responsabilidad moral y empatía</li>
-            <li>Transparencia y explicabilidad algorítmica obligatoria</li>
-            <li>Liderazgo constructivo en la integración de robots a la sociedad</li>
+            <li>La tecnología no es buena ni mala: depende de cómo la diseñemos y programemos.</li>
+            <li>Las máquinas necesitan supervisión humana, transparencia y límites claros.</li>
+            <li>El valor humano: las computadoras calculan números, pero nosotros ponemos los valores.</li>
+            <li>La imagen de cierre: los robots mirando a Sonny esperando un guía pacífico.</li>
           </ul>
         </div>
         <div class="card cyan">
-          <h3>Idea clave / Conclusión final</h3>
-          <p>💡 La prueba definitiva de un sistema inteligente no es su poder de cómputo ni su capacidad de control, sino su compromiso ético con la preservación de la vida y la libertad humana.</p>
+          <h3>Mensaje de Cierre</h3>
+          <p>💡 La mejor Inteligencia Artificial no es la más poderosa, sino la que mejor ayuda a la humanidad a ser más justa y libre.</p>
         </div>
       </div>
     </div>
@@ -777,7 +833,7 @@
       });
       currentIdx = idx;
       counter.textContent = `Diapositiva ${idx + 1} / ${slides.length}`;
-      speakerBadge.textContent = slides[idx].getAttribute('data-speaker') || 'PRESENTACIÓN';
+      speakerBadge.textContent = "🗣️ " + (slides[idx].getAttribute('data-speaker') || 'PRESENTACIÓN');
     }
 
     function nextSlide() {
