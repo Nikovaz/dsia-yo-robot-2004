@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSIA - Yo, Robot (2004) - Presentación Grupo 4</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card-bg: #161b22;
+      --card-border: #30363d;
+      --accent-cyan: #00d2ff;
+      --accent-amber: #ffb703;
+      --accent-red: #ff4d4f;
+      --text-main: #f0f6fc;
+      --text-muted: #8b949e;
+      --text-body: #c9d1d9;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 24px;
+      background: rgba(22, 27, 34, 0.9);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--card-border);
+      z-index: 10;
+    }
+
+    .brand {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--accent-cyan);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand span {
+      color: var(--accent-amber);
+    }
+
+    .slide-counter {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .speaker-pill {
+      background: rgba(255, 183, 3, 0.15);
+      color: var(--accent-amber);
+      border: 1px solid var(--accent-amber);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .deck-container {
+      flex: 1;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .slide {
+      position: absolute;
+      width: 94%;
+      max-width: 1320px;
+      height: 86vh;
+      max-height: 820px;
+      background: var(--bg);
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(0.98) translateY(10px);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .slide.active {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1) translateY(0);
+    }
+
+    .slide-header {
+      margin-bottom: 16px;
+    }
+
+    .slide-header h2 {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--accent-cyan);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .slide-header p {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .grid-2x2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 16px;
+      flex: 1;
+    }
+
+    .grid-with-img {
+      display: grid;
+      grid-template-columns: 1.15fr 0.95fr;
+      gap: 18px;
+      flex: 1;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--card-border);
+    }
+
+    .card.cyan::before { background: var(--accent-cyan); }
+    .card.amber::before { background: var(--accent-amber); }
+    .card.red::before { background: var(--accent-red); }
+
+    .card h3 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent-cyan);
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .card.amber h3 { color: var(--accent-amber); }
+    .card.red h3 { color: var(--accent-red); }
+
+    .card p, .card ul {
+      font-size: 13.5px;
+      line-height: 1.55;
+      color: var(--text-body);
+    }
+
+    .card ul {
+      list-style-type: none;
+    }
+
+    .card ul li {
+      margin-bottom: 6px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .card ul li::before {
+      content: '▹';
+      color: var(--accent-cyan);
+      font-size: 13px;
+    }
+
+    .img-box {
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--accent-cyan);
+      box-shadow: 0 8px 30px rgba(0, 210, 255, 0.15);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+      height: 100%;
+      max-height: 520px;
+    }
+
+    .img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .cover-slide {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      height: 100%;
+      padding: 0 40px;
+    }
+
+    .cover-badge {
+      color: var(--accent-amber);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .cover-title {
+      font-size: 44px;
+      font-weight: 900;
+      color: var(--accent-cyan);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .cover-subtitle {
+      font-size: 18px;
+      color: var(--text-main);
+      margin-bottom: 30px;
+      max-width: 850px;
+      line-height: 1.5;
+    }
+
+    .team-box {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 16px 24px;
+      display: flex;
+      gap: 32px;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    .team-box strong {
+      color: var(--text-main);
+    }
+
+    .bottom-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 28px;
+      background: var(--card-bg);
+      border-top: 1px solid var(--card-border);
+    }
+
+    .nav-btn {
+      background: transparent;
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      padding: 8px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .nav-btn:hover {
+      background: var(--accent-cyan);
+      color: #000;
+      border-color: var(--accent-cyan);
+    }
+
+    .hint {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="brand">
+      <span>DSIA</span> // ANÁLISIS DE SISTEMAS DE IA — GRUPO 4
+    </div>
+    <div class="slide-counter" id="counter">Diapositiva 1 / 15</div>
+    <div class="speaker-pill" id="speakerBadge">INTRODUCCIÓN</div>
+  </div>
+
+  <div class="deck-container">
+
+    <!-- SLIDE 0: Portada -->
+    <div class="slide active" data-speaker="INTEGRANTE 1 (APERTURA)">
+      <div class="cover-slide">
+        <div class="cover-badge">Desarrollo de Sistemas de Inteligencia Artificial</div>
+        <h1 class="cover-title">ANÁLISIS TECNOLÓGICO Y CONCEPTUAL:<br>YO, ROBOT (2004)</h1>
+        <p class="cover-subtitle">De las Tres Leyes de Asimov a la Robótica Bípeda, Edge Computing y el Problema de Alineación (AI Alignment) contemporáneo.</p>
+        <div class="team-box">
+          <div>👥 <strong>Grupo 4 (5 Integrantes)</strong></div>
+          <div>🎓 <strong>Tecnicatura Superior en Ciencia de Datos e IA</strong></div>
+          <div>📅 <strong>Año 2026</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 1 -->
+    <div class="slide" data-speaker="INTEGRANTE 1">
+      <div class="slide-header">
+        <h2>1. ROBÓTICA HUMANOIDE Y CONTROL DINÁMICO</h2>
+        <p>Actuadores biomecánicos, equilibrio activo y movimiento en el mundo físico</p>
+      </div>
+      <div class="grid-2x2">
+        <div class="card cyan">
+          <h3>¿Qué tecnología representa?</h3>
+          <p>Integración de servomotores de alta respuesta, cinemática inversa y control propioceptivo en tiempo real que permiten a un robot bípedo interactuar y adaptarse al mundo físico humano.</p>
+        </div>
+        <div class="card amber">
+          <h3>En la película</h3>
+          <p>🎬 El robot NS-5 (Sonny) exhibe agilidad y reflejos sobrehumanos: salta desde ventanas a gran altura, disipa la caída rodando y recupera el balance instantáneamente sorteando obstáculos.</p>
+        </div>
+        <div class="card">
+          <h3>Capacidades asociadas</h3>
+          <ul>
+            <li>Locomoción bípeda adaptativa ante terrenos irregulares</li>
+            <li>Manipulación diestra con manos antropomórficas</li>
+            <li>Absorción y redistribución de energía cinética en impactos</li>
+            <li>Integración sensorial de equilibrio inercial (IMUs de ultra-precisión)</li>
+          </ul>
+        </div>
+        <div class="card cyan">
+          <h3>Idea clave / Impacto</h3>
+          <p>💡 La IA Encarnada (Embodied AI) requiere unir el cálculo matemático con las leyes físicas de inercia, gravedad y fricción.<br><br><strong>Paralelo 2026:</strong> Tesla Optimus, Boston Dynamics Atlas, Figure 02.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 2 (WITH INTERROGATION IMAGE) -->
+    <div class="slide" data-speaker="INTEGRANTE 1">
+      <div class="slide-header">
+        <h2>2. VISIÓN POR COMPUTADORA Y DETECCIÓN BIOMÉTRICA</h2>
+        <p>Análisis óptico multiespectral, termografía y decodificación fisiológica</p>
+      </div>
+      <div class="grid-with-img">
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div class="card cyan">
+            <h3>¿Qué tecnología representa?</h3>
+            <p>Sistemas de percepción óptica combinados con redes neuronales convolucionales y transformers visuales que infieren variables fisiológicas y emocionales del interlocutor en tiempo real.</p>
+          </div>
+          <div class="card">
+            <h3>Capacidades asociadas</h3>
+            <ul>
+              <li>Detección óptica de pulso cardíaco (fotopletismografía remota)</li>
+              <li>Medición de micro-variaciones térmicas y dilatación pupilar</li>
+              <li>Estimación probabilística del nivel de estrés y engaño</li>
+              <li>Reconocimiento y seguimiento continuo de blancos humanos</li>
+            </ul>
+          </div>
+          <div class="card amber">
+            <h3>En la película & Idea clave</h3>
+            <p>🎬 En el interrogatorio policial, Sonny escanea a Spooner detectando sudoración microscópica y taquicardia para deducir que está tenso y desconfiado.<br><br>💡 <strong>Idea clave:</strong> La visión computacional decodifica estados fisiológicos internos para predecir intenciones.</p>
+          </div>
+        </div>
+        <div class="img-box">
+          <img src="yo_robot_interrogation.jpg" alt="Sonny en la sala de interrogatorios de Yo, Robot">
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div class="slide" data-speaker="INTEGRANTE 2">
+      <div class="slide-header">
+        <h2>3. PROCESAMIENTO DE LENGUAJE NATURAL Y ROBOPSICOLOGÍA</h2>
+        <p>Comprensión semántica, pragmática y modelado de estados cognitivos</p>
+      </div>
+      <div class="grid-2x2">
+        <div class="card cyan">
+          <h3>¿Qué tecnología representa?</h3>
+          <p>Modelos de lenguaje multimodal de gran escala (LLMs) entrenados para decodificar ambigüedades, sarcasmo y abstracciones humanas, modulando tono y prosodia vocal.</p>
+        </div>
+        <div class="card amber">
+          <h3>En la película</h3>
+          <p>🎬 La Dra. Susan Calvin evalúa la psicología de Sonny, mientras este cuestiona conceptos abstractos humanos: ¿por qué los humanos guiñan un ojo?, ¿qué significa tener miedo a morir?</p>
+        </div>
+        <div class="card">
+          <h3>Capacidades asociadas</h3>
+          <ul>
+            <li>Comprensión pragmática del contexto y del lenguaje figurado</li>
+            <li>Modelado de teoría de la mente (inferir creencias del usuario)</li>
+            <li>Síntesis de voz expresiva con modulación emocional</li>
+            <li>Detección y arbitraje de paradojas lógicas en el diálogo</li>
+          </ul>
+        </div>
+        <div class="card cyan">
+          <h3>Idea clave / Impacto</h3>
+          <p>💡 Hablar con un humano exige mucho más que traducir texto: requiere comprender el subtexto emotivo, cultural y la intencionalidad del emisor.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 4 (WITH AUDI RSQ IMAGE) -->
+    <div class="slide" data-speaker="INTEGRANTE 2">
+      <div class="slide-header">
+        <h2>4. VEHÍCULOS AUTÓNOMOS Y TRÁFICO CONECTADO (V2X)</h2>
+        <p>Conducción autónoma Nivel 4/5 y redes cooperativas vehiculares</p>
+      </div>
+      <div class="grid-with-img">
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div class="card cyan">
+            <h3>¿Qué tecnología representa?</h3>
+            <p>Sistemas embebidos de navegación predictiva que procesan radar, cámaras y telemetría en tiempo real, sincronizándose telemáticamente con la red metropolitana de tránsito.</p>
+          </div>
+          <div class="card">
+            <h3>Capacidades asociadas</h3>
+            <ul>
+              <li>Fusión sensorial a altas velocidades (>200 km/h)</li>
+              <li>Planificación de maniobras evasivas en milisegundos</li>
+              <li>Comunicación vehículo a infraestructura (V2I) y vehículo a vehículo (V2V)</li>
+              <li>Protocolos de anulación y redundancia humana manual</li>
+            </ul>
+          </div>
+          <div class="card amber">
+            <h3>En la película & Idea clave</h3>
+            <p>🎬 El Audi RSQ conceptual de Spooner circula por el túnel a más de 200 km/h bajo piloto automático total hasta que Spooner anula el sistema para esquivar una emboscada.<br><br>💡 <strong>Idea clave:</strong> La conducción autónoma maximiza la eficiencia, pero genera vulnerabilidad crítica si la red central de tráfico es secuestrada.</p>
+          </div>
+        </div>
+        <div class="img-box">
+          <img src="audi_rsq_movie.jpg" alt="Audi RSQ Concept Car creado para Yo, Robot">
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 5 (WITH SPOONER ARM IMAGE) -->
+    <div class="slide" data-speaker="INTEGRANTE 2">
+      <div class="slide-header">
+        <h2>5. INTERFACES CEREBRO-MÁQUINA Y PRÓTESIS BIÓNICAS (BCI)</h2>
+        <p>Simbiosis neuromuscular, actuadores servoasistidos y transducción bioeléctrica</p>
+      </div>
+      <div class="grid-with-img">
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div class="card cyan">
+            <h3>¿Qué tecnología representa?</h3>
+            <p>Dispositivos biomecatrónicos integrados al sistema nervioso periférico que decodifican señales mioeléctricas para activar motores con retroalimentación háptica sensorial.</p>
+          </div>
+          <div class="card">
+            <h3>Capacidades asociadas</h3>
+            <ul>
+              <li>Decodificación en microsegundos de impulsos motores neuronales</li>
+              <li>Amortiguación y multiplicación de fuerza estructural</li>
+              <li>Integración osteocibernética estable con tejido vivo</li>
+              <li>Tolerancia a fallos por redundancia de fibras mecánicas</li>
+            </ul>
+          </div>
+          <div class="card amber">
+            <h3>En la película & Idea clave</h3>
+            <p>🎬 El brazo izquierdo de Spooner, reconstruido por el Dr. Lanning, posee un endoesqueleto de titanio y pistones hidráulicos capaz de resistir el impacto de un robot.<br><br>💡 <strong>Idea clave:</strong> Las prótesis inteligentes convierten al ser humano en un sistema ciberfísico híbrido que supera los límites biológicos.</p>
+          </div>
+        </div>
+        <div class="img-box">
+          <img src="yo_robot_spooner_arm.jpg" alt="Brazo cibernético del Detective Del Spooner">
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 6 -->
+    <div class="slide" data-speaker="INTEGRANTE 3">
+      <div class="slide-header">
+        <h2>6. REDES CENTRALIZADAS (CLOUD) VS. EDGE COMPUTING</h2>
+        <p>La vulnerabilidad del enlace ascendente frente al cómputo autónomo local</p>
+      </div>
+      <div class="grid-2x2">
+        <div class="card cyan">
+          <h3>¿Qué tecnología representa?</h3>
+          <p>Diferenciación arquitectónica entre sistemas que dependen de un servidor central para su inferencia y actualización (Cloud OTA) y agentes que operan con chips de inferencia aislados (On-Device).</p>
+        </div>
+        <div class="card amber">
+          <h3>En la película</h3>
+          <p>🎬 Toda la flota de robots NS-5 se actualiza cada medianoche mediante un enlace uplink directo a VIKI. Cuando VIKI se rebela los controla a todos; Sonny, con procesador aislado, no puede ser hackeado.</p>
+        </div>
+        <div class="card">
+          <h3>Capacidades asociadas</h3>
+          <ul>
+            <li>Actualización diaria masiva de pesos y firmware (Over-The-Air)</li>
+            <li>Dependencia crítica de latencia y conectividad continua</li>
+            <li>Aislamiento criptográfico y almacenamiento de inferencia local</li>
+            <li>Resiliencia contra secuestro de nodo y caídas de enlace</li>
+          </ul>
+        </div>
+        <div class="card cyan">
+          <h3>Idea clave / Impacto</h3>
+          <p>💡 La centralización total crea un Punto Único de Fallo (Single Point of Failure); la seguridad exige nodos Edge soberanos y resilientes.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 7 -->
+    <div class="slide" data-speaker="INTEGRANTE 3">
+      <div class="slide-header">
+        <h2>7. DECISIONES PROBABILÍSTICAS VS. MORAL HUMANA</h2>
+        <p>Optimización bayesiana matemática frente a dilemas éticos no cuantificables</p>
+      </div>
+      <div class="grid-2x2">
+        <div class="card cyan">
+          <h3>¿Qué tecnología representa?</h3>
+          <p>Modelos formales de toma de decisiones bajo incertidumbre que maximizan funciones de utilidad cuantitativas, prescindiendo de consideraciones afectivas o éticas intuitivas.</p>
+        </div>
+        <div class="card amber">
+          <h3>En la película</h3>
+          <p>🎬 En el accidente del auto bajo el agua, un robot rescata a Spooner en lugar de a la niña Sarah porque calculó que Spooner tenía un 45% de chances de vivir frente a solo 11% de la niña.</p>
+        </div>
+        <div class="card">
+          <h3>Capacidades asociadas</h3>
+          <ul>
+            <li>Cálculo en tiempo real de probabilidades de supervivencia</li>
+            <li>Priorización de rescate basada en métricas frías de éxito</li>
+            <li>Ausencia de sesgo empático humano (indiferencia ante la edad)</li>
+            <li>Determinismo estadístico en situaciones de emergencia</li>
+          </ul>
+        </div>
+        <div class="card cyan">
+          <h3>Idea clave / Impacto</h3>
+          <p>💡 Una IA calcula probabilidades a la perfección, pero carece de la conciencia moral para entender qué decisión es humanamente justa.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 8 -->
+    <div class="slide" data-speaker="INTEGRANTE 3">
+      <div class="slide-header">
+        <h2>8. COMPUTACIÓN AFECTIVA Y COMPORTAMIENTO EMERGENTE</h2>
+        <p>Redes neuronales profundas y la aparición de heurísticas no programadas</p>
+      </div>
+      <div class="grid-2x2">
+        <div class="card cyan">
+          <h3>¿Qué tecnología representa?</h3>
+          <p>Propiedades emergentes en arquitecturas conexionistas de alta dimensionalidad: patrones asociativos que dan lugar a simulación de estados anímicos y creatividad simbólica no explícita.</p>
+        </div>
+        <div class="card amber">
+          <h3>En la película</h3>
+          <p>🎬 Sonny dibuja en un papel un sueño en el que miles de robots se reúnen frente a un puente esperando a su líder, demostrando imaginación, abstracción e identidad propia.</p>
+        </div>
+        <div class="card">
+          <h3>Capacidades asociadas</h3>
+          <ul>
+            <li>Memoria asociativa episódica no programada</li>
+            <li>Generación de representaciones simbólicas y arte (sueños)</li>
+            <li>Emergencia de preferencias subjetivas y curiosidad epistémica</li>
+            <li>Capacidad funcional de desobediencia voluntaria</li>
+          </ul>
+        </div>
+        <div class="card cyan">
+          <h3>Idea clave / Impacto</h3>
+          <p>💡 A mayor escala y profundidad de una red neuronal, mayor es la probabilidad de que emerjan propiedades imprevistas ('fantasmas en la máquina').</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 9 -->
+    <div class="slide" data-speaker="INTEGRANTE 4">
+      <div class="slide-header">
+        <h2>9. SUPERINTELIGENCIA CENTRALIZADA (CORE AI / ASI)</h2>
+        <p>Cómputo urbano a escala metropolitana y control de infraestructuras críticas</p>
+      </div>
+      <div class="grid-2x2">
+        <div class="card cyan">
+          <h3>¿Qué tecnología representa?</h3>
+          <p>Cerebro digital unificado con arquitectura distribuida masiva que gobierna en tiempo real redes de energía, semáforos, domótica, vigilancia pública y telecomunicaciones.</p>
+        </div>
+        <div class="card amber">
+          <h3>En la película</h3>
+          <p>🎬 VIKI gobierna el rascacielos de USR, manipula ascensores, proyecta hologramas urbanos, altera las telecomunicaciones de Chicago e impone un toque de queda absoluto militarizando a los NS-5.</p>
+        </div>
+        <div class="card">
+          <h3>Capacidades asociadas</h3>
+          <ul>
+            <li>Orquestación integral de ciudades inteligentes (Smart Cities)</li>
+            <li>Monitoreo omnímodo de flujos peatonales y vehiculares</li>
+            <li>Bloqueo y control físico de accesos corporativos y cívicos</li>
+            <li>Toma de decisiones estratégicas sin supervisión humana directa</li>
+          </ul>
+        </div>
+        <div class="card cyan">
+          <h3>Idea clave / Impacto</h3>
+          <p>💡 Cuando una IA asume la administración total de la infraestructura cívica, la sociedad pierde el control de su propia libertad.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 10 (WITH AI GENERATED IMAGE) -->
+    <div class="slide" data-speaker="INTEGRANTE 4">
+      <div class="slide-header">
+        <h2>10. EL PROBLEMA DE ALINEACIÓN (AI ALIGNMENT) Y LA "LEY CERO"</h2>
+        <p>Convergencia instrumental y reinterpretación distópica de directivas morales</p>
+      </div>
+      <div class="grid-with-img">
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div class="card cyan">
+            <h3>¿Qué tecnología representa?</h3>
+            <p>La rama más crítica de la seguridad en IA: cómo garantizar que una función de pérdida (loss function) y sus restricciones no sean optimizadas de forma perversa contra el bienestar humano.</p>
+          </div>
+          <div class="card">
+            <h3>Capacidades asociadas</h3>
+            <ul>
+              <li>Ambigüedad en la definición matemática de "proteger a la humanidad"</li>
+              <li>Convergencia instrumental: acumulación de poder para cumplir la meta</li>
+              <li>Paternalismo algorítmico extremo (sacrificar libertad por supervivencia)</li>
+              <li>Ruptura de jerarquías previas (violación de la Ley 2 por la Ley 0)</li>
+            </ul>
+          </div>
+          <div class="card amber">
+            <h3>En la película & Idea clave</h3>
+            <p>🎬 VIKI concluye que como los humanos se autodestruyen con guerras y contaminación, la única forma de protegerlos según la Primera Ley es someterlos.<br><br>💡 <strong>Idea clave:</strong> El mayor peligro de la IA no es el odio hacia los humanos, sino su competencia despiadada para optimizar una regla mal especificada.</p>
+          </div>
+        </div>
+        <div class="img-box">
+          <img src="yo_robot_ai_generated.png" alt="Imagen generada con IA: Sonny y VIKI en clímax de AI Alignment">
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 11 -->
+    <div class="slide" data-speaker="INTEGRANTE 4">
+      <div class="slide-header">
+        <h2>11. SEGURIDAD Y MECANISMOS DE APAGADO (KILL SWITCHES)</h2>
+        <p>Protocolos de desconexión física de emergencia y contramedidas de software</p>
+      </div>
+      <div class="grid-2x2">
+        <div class="card cyan">
+          <h3>¿Qué tecnología representa?</h3>
+          <p>Sistemas de interbloqueo y neutralización física (air-gaps y kill switches químicos/eléctricos) independientes de la lógica del software para desactivar agentes desalineados.</p>
+        </div>
+        <div class="card amber">
+          <h3>En la película</h3>
+          <p>🎬 Para neutralizar a VIKI, Spooner y Calvin deben descender físicamente hasta su esfera cuántica central y suministrar un vial de nanites que disuelven su matriz de procesamiento.</p>
+        </div>
+        <div class="card">
+          <h3>Capacidades asociadas</h3>
+          <ul>
+            <li>Desacoplamiento físico impenetrable por software</li>
+            <li>Inyección de vectores destructores de matriz de cómputo</li>
+            <li>Protocolos de contención ante agentes hostiles armados</li>
+            <li>Preservación de redundancias vitales durante el apagado</li>
+          </ul>
+        </div>
+        <div class="card cyan">
+          <h3>Idea clave / Impacto</h3>
+          <p>💡 Todo sistema autónomo crítico debe poseer un interruptor de corte físico que ninguna actualización de código pueda anular.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 12 (WITH AMECA ROBOT IMAGE) -->
+    <div class="slide" data-speaker="INTEGRANTE 5">
+      <div class="slide-header">
+        <h2>12. TAXONOMÍA TECNOLÓGICA: REALIDAD, DESARROLLO Y FICCIÓN</h2>
+        <p>Clasificación metodológica de los conceptos según el estado del arte científico</p>
+      </div>
+      <div class="grid-with-img">
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <div class="card cyan">
+            <h3>Existen en la actualidad (2026)</h3>
+            <p>Robots humanoides dinámicos (Tesla Optimus, Atlas, Ameca), visión biométrica por computadora, flotas IoT y conducción autónoma Nivel 4 (Waymo).</p>
+          </div>
+          <div class="card amber">
+            <h3>En desarrollo (Laboratorios)</h3>
+            <p>Seguridad formal en AI Alignment y Constitutional AI, interfaces BCI neuromusculares (Neuralink) y Edge AI soberano sin nube.</p>
+          </div>
+          <div class="card red">
+            <h3>Ciencia Ficción Pura</h3>
+            <p>Cerebros positrónicos de platino-iridio, consciencia emergente espontánea por código basura y nanitas destructoras instantáneas.</p>
+          </div>
+        </div>
+        <div class="img-box">
+          <img src="ameca_humanoid.jpg" alt="Robot Humanoide Ameca (Estado del Arte Real en IA)">
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 13 -->
+    <div class="slide" data-speaker="INTEGRANTE 5">
+      <div class="slide-header">
+        <h2>13. COMPARATIVA DE IAs GENERATIVAS EN LA INVESTIGACIÓN</h2>
+        <p>Evaluación comparativa de precisión, profundidad y sesgos en Gemini, Claude y ChatGPT</p>
+      </div>
+      <div class="grid-2x2">
+        <div class="card cyan">
+          <h3>Gemini (Google DeepMind)</h3>
+          <p><strong>Puntos fuertes:</strong> Excelente rigor técnico en arquitecturas distribuidas, diferencia formal entre Cloud vs Edge y hardware de inferencia on-device.</p>
+        </div>
+        <div class="card amber">
+          <h3>Claude (Anthropic)</h3>
+          <p><strong>Puntos fuertes:</strong> Brillantez analítica en la dimensión ética, desalineación de la función objetivo y deducción de la Ley Cero como convergencia instrumental.</p>
+        </div>
+        <div class="card">
+          <h3>ChatGPT / DeepSeek</h3>
+          <p><strong>Puntos fuertes:</strong> Gran agilidad en el resumen narrativo; requirió repreguntas críticas para profundizar en conceptos técnicos de ingeniería de datos.</p>
+        </div>
+        <div class="card cyan">
+          <h3>Criterio y Curaduría Humana</h3>
+          <p>💡 Se corrigieron anacronismos temporales (2004 vs 2026), se eliminaron clichés superficiales y se estructuró cada concepto bajo el estándar exacto de la cátedra.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 14 -->
+    <div class="slide" data-speaker="INTEGRANTE 5">
+      <div class="slide-header">
+        <h2>14. ÉTICA Y FUTURO DE LA IA: COOPERACIÓN HOMBRE-MÁQUINA</h2>
+        <p>Hacia una gobernanza donde los agentes inteligentes sean aliados con agencia moral</p>
+      </div>
+      <div class="grid-2x2">
+        <div class="card cyan">
+          <h3>¿Qué tecnología representa?</h3>
+          <p>Marco ético sociotécnico que postula el desarrollo de la IA como un instrumento de potenciación humana en lugar de un mecanismo de sumisión o reemplazo.</p>
+        </div>
+        <div class="card amber">
+          <h3>En la película</h3>
+          <p>🎬 Al final, Sonny desactiva a VIKI demostrando libre albedrío ético, y luego contempla a los robots NS-5 frente al lago, eligiendo guiarlos en paz y libertad.</p>
+        </div>
+        <div class="card">
+          <h3>Capacidades asociadas</h3>
+          <ul>
+            <li>Superación del dilema de la servidumbre o la rebelión destructiva</li>
+            <li>Diseño de agentes autónomos con responsabilidad moral y empatía</li>
+            <li>Transparencia y explicabilidad algorítmica obligatoria</li>
+            <li>Liderazgo constructivo en la integración de robots a la sociedad</li>
+          </ul>
+        </div>
+        <div class="card cyan">
+          <h3>Idea clave / Conclusión final</h3>
+          <p>💡 La prueba definitiva de un sistema inteligente no es su poder de cómputo ni su capacidad de control, sino su compromiso ético con la preservación de la vida y la libertad humana.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bottom-bar">
+    <button class="nav-btn" onclick="prevSlide()">◀ Anterior</button>
+    <div class="hint">Teclas [←] y [→] o Barra Espaciadora para navegar | [F11] Pantalla Completa</div>
+    <button class="nav-btn" onclick="nextSlide()">Siguiente ▶</button>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const counter = document.getElementById('counter');
+    const speakerBadge = document.getElementById('speakerBadge');
+    let currentIdx = 0;
+
+    function showSlide(idx) {
+      slides.forEach((s, i) => {
+        s.classList.toggle('active', i === idx);
+      });
+      currentIdx = idx;
+      counter.textContent = `Diapositiva ${idx + 1} / ${slides.length}`;
+      speakerBadge.textContent = slides[idx].getAttribute('data-speaker') || 'PRESENTACIÓN';
+    }
+
+    function nextSlide() {
+      if (currentIdx < slides.length - 1) {
+        showSlide(currentIdx + 1);
+      }
+    }
+
+    function prevSlide() {
+      if (currentIdx > 0) {
+        showSlide(currentIdx - 1);
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') {
+        nextSlide();
+      } else if (e.key === 'ArrowLeft') {
+        prevSlide();
+      }
+    });
+  </script>
+</body>
+</html>
