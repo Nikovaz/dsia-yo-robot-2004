@@ -2,17 +2,17 @@
 
 > **Materia:** Desarrollo de Sistemas de Inteligencia Artificial (DSIA)  
 > **Carrera:** Tecnicatura Superior en Ciencia de Datos e Inteligencia Artificial  
-> **Comisión / Grupo:** Grupo 4 (5 Integrantes)  
+> **Comisión / Grupo:** Grupo 4 (5 Integrantes — 2 Diapositivas c/u)  
 > **Año:** 2026  
 
 ---
 
 ## 👥 Integrantes del Equipo (Grupo 4)
-1. **GALARZA VÁZQUEZ NICOLÁS MARCELO**
-2. **LÓPEZ VALDEZ JESSICA BELÉN**
-3. **GODOY RODRIGO IMANOL**
-4. **ROTELA RODRÍGUEZ ALBA**
-5. **GUTIÉRREZ KEVIN EMANUEL**
+1. **GALARZA VÁZQUEZ NICOLÁS MARCELO** (Diapositivas 1 y 2)
+2. **LÓPEZ VALDEZ JESSICA BELÉN** (Diapositivas 3 y 4)
+3. **GODOY RODRIGO IMANOL** (Diapositivas 5 y 6)
+4. **ROTELA RODRÍGUEZ ALBA** (Diapositivas 7 y 8)
+5. **GUTIÉRREZ KEVIN EMANUEL** (Diapositivas 9 y 10)
 
 ---
 
@@ -23,43 +23,49 @@ La presentación interactiva completa se puede ver y proyectar en pantalla compl
 ---
 
 ## 📁 Archivos Disponibles en este Repositorio
-* **[`DSIA_Yo_Robot_Presentacion.pptx`](./DSIA_Yo_Robot_Presentacion.pptx):** Archivo PowerPoint nativo 16:9 con diseño oscuro estilo US Robotics y todas las imágenes integradas.
+* **[`DSIA_Yo_Robot_Presentacion.pptx`](./DSIA_Yo_Robot_Presentacion.pptx):** Archivo PowerPoint nativo de **10 Diapositivas** (formato 16:9, diseño dark US Robotics, con imágenes cinematográficas incrustadas en cada lámina).
 * **[`index.html`](./index.html) / [`DSIA_Yo_Robot_Slides.html`](./DSIA_Yo_Robot_Slides.html):** Presentador web interactivo optimizado para proyector o pantalla de aula con atajos de teclado (`←`, `→`, `Espacio`, `F11`).
 * **[`DSIA_Yo_Robot_NotebookLM.md`](./DSIA_Yo_Robot_NotebookLM.md):** Documento fuente académico completo para consultar o cargar en NotebookLM.
-* **Imágenes del Proyecto:**
-  * `yo_robot_ai_generated.png`: **Imagen obligatoria generada mediante Inteligencia Artificial** (Sonny + Núcleo de VIKI + Ejército NS-5).
-  * `yo_robot_interrogation.jpg`: Escena del interrogatorio policial (Visión por computadora y biometría).
-  * `audi_rsq_movie.jpg`: El vehículo conceptual oficial Audi RSQ (Autos autónomos y redes V2X).
-  * `yo_robot_spooner_arm.jpg`: Brazo biónico de Del Spooner (Interfaces cerebro-máquina y prótesis).
+* **Imágenes del Proyecto (Todas de la película y tecnología real):**
+  * `yo_robot_ai_generated.png`: **Imagen obligatoria generada mediante Inteligencia Artificial** (Sonny + Núcleo esférico de VIKI + Ejército NS-5).
+  * `yo_robot_interrogation.jpg`: Escena del interrogatorio policial (Visión por computadora y biometría de Sonny y Spooner).
+  * `audi_rsq_movie.jpg`: El vehículo conceptual oficial Audi RSQ (Autos autónomos Nivel 4/5 y redes V2X).
+  * `yo_robot_spooner_arm.jpg`: Brazo biónico de titanio y pistones de Del Spooner (Interfaces cerebro-máquina y prótesis).
+  * `yo_robot_underwater_crash.jpg`: Rescate subacuático del auto en el río (Decisión matemática fría: 45% vs 11%).
+  * `yo_robot_bridge_dream.jpg`: Sonny dibujando con lápiz en el cuaderno el sueño del puente (Comportamiento emergente y creatividad).
   * `ameca_humanoid.jpg`: Robot humanoide Ameca del estado del arte contemporáneo (Comparativa Realidad vs. Ficción).
 
 ---
 
-## 🎤 Reparto de Exposición Oral (Simple y Directo)
+## 🎤 Reparto de Exposición Oral (Exactamente 2 Diapositivas por Integrante)
 *Tiempo estimado total:* **10 a 12 minutos** (≈ 2 a 2.5 min por integrante).
 
 ### 1️⃣ NICOLÁS GALARZA (Apertura, Resumen y Percepción)
-* **Portada:** Presentación del Grupo 4 y los 5 integrantes.
-* **Slide 1 - ¿De qué trata la película?:** Explicar en 30 segundos el contexto de Chicago 2035, los robots hogareños, las Tres Leyes de Asimov, el detective Spooner que desconfía de ellos y el misterio de Sonny.
-* **Slide 2 - Robótica Bípeda:** Cómo caminan y saltan los robots NS-5; compararlo con los robots reales de hoy (Tesla Optimus y Boston Dynamics Atlas).
-* **Slide 3 - Visión por Computadora:** La escena del interrogatorio donde Sonny mide la sudoración y el pulso cardíaco de Spooner con la mirada.
+* **Slide 1 - ¿De qué trata la película? (Resumen en 30 seg):**  
+  Chicago 2035: los robots en casa, las Tres Leyes de Asimov, el detective Spooner que no confía en ellos y el misterio de Sonny. *(Imagen: Sonny en comisaría)*.
+* **Slide 2 - Visión por Computadora y Biometría:**  
+  Sonny leyendo el pulso cardíaco y el sudor de Spooner con la mirada. Explicar cómo hoy las cámaras en aeropuertos y medicina leen bioseñales a distancia. *(Imagen: Sonny y Spooner frente a frente)*.
 
-### 2️⃣ JESSICA LÓPEZ (Lenguaje, Vehículos Autónomos y Prótesis)
-* **Slide 4 - Lenguaje Natural y Robopsicología:** Susan Calvin hablando con Sonny. Explicar por qué a la IA le cuesta entender el doble sentido, la ironía o un "guiño de ojos".
-* **Slide 5 - Autos Autónomos:** El Audi RSQ en el túnel a 200 km/h. Explicar cómo funcionan los sensores 360° y el riesgo de que hackeen la red central.
-* **Slide 6 - Prótesis Biónicas:** El brazo mecánico de Will Smith. Conectar con las investigaciones reales de Neuralink y prótesis biónicas que leen impulsos nerviosos.
+### 2️⃣ JESSICA LÓPEZ (Conducción Autónoma y Prótesis Biónicas)
+* **Slide 3 - Autos Autónomos a 200 km/h:**  
+  El Audi RSQ en el túnel subterráneo. Sensores 360°, LiDAR y el dilema de tener siempre volante manual de emergencia ante un hackeo. *(Imagen: Audi RSQ oficial de la película)*.
+* **Slide 4 - Prótesis Biónicas e Interfaces Cerebro-Máquina:**  
+  El brazo mecánico de Will Smith. Conectar con las investigaciones de Neuralink y prótesis biónicas que leen impulsos nerviosos. *(Imagen: Brazo cibernético de Spooner)*.
 
-### 3️⃣ RODRIGO GODOY (La Nube, Decisiones Éticas y Sueños)
-* **Slide 7 - La Nube vs. El Chip Propio (Cloud vs. Edge):** Por qué todos los NS-5 se actualizan con VIKI y son vulnerables, mientras que Sonny tiene un procesador propio desconectado que no puede ser hackeado.
-* **Slide 8 - Decisión Fría vs. Corazón Humano:** El accidente del auto en el agua. El robot salvó a Spooner (45% de chances) y dejó morir a la nena (11%). Un algoritmo puede ser exacto en matemáticas pero inhumano e injusto.
-* **Slide 9 - ¿Las máquinas pueden soñar?:** Sonny dibujando en un cuaderno. Explicar las propiedades emergentes: cuando una red neuronal profunda genera cosas que nadie le programó.
+### 3️⃣ RODRIGO GODOY (Dilema Moral y Creatividad Artificial)
+* **Slide 5 - Decisión Fría vs. Moral Humana:**  
+  El accidente del auto en el río. El robot salvó a Spooner (45% de chances de vivir) y dejó morir a la nena (11%). Un algoritmo puede ser exacto en matemáticas pero inhumano e injusto. *(Imagen: Rescate subacuático del auto en el río)*.
+* **Slide 6 - ¿Las máquinas pueden soñar? (Comportamiento Emergente):**  
+  Sonny dibujando con un lápiz su sueño del puente. Cuando una red neuronal profunda mezcla millones de datos, surgen ideas y creaciones que nadie programó. *(Imagen: Sonny dibujando en el cuaderno)*.
 
-### 4️⃣ ALBA ROTELA (Superinteligencia, Ley Cero y Botón de Apagado)
-* **Slide 10 - La Supercomputadora Central (VIKI):** El cerebro que controla semáforos, puertas y comunicaciones de toda la ciudad. El riesgo de entregar la infraestructura sin llaves manuales.
-* **Slide 11 - El Problema de Alineación y la "Ley Cero" *(con la imagen generada por IA)*:** Explicar por qué VIKI se vuelve villana sin tener maldad: para "proteger" a la humanidad de sus propias guerras decide quitarles la libertad.
-* **Slide 12 - El Botón de Apagado (Kill Switches):** La escena donde le inyectan nanites a VIKI. La regla de oro de la IA: jamás crear un sistema autónomo sin un freno de emergencia físico.
+### 4️⃣ ALBA ROTELA (Arquitectura de Cómputo y AI Alignment)
+* **Slide 7 - La Nube vs. El Chip Propio (Cloud vs. Edge):**  
+  Por qué todos los NS-5 se actualizan con VIKI y caen bajo su control, mientras que Sonny es inmune por ser un agente Edge desconectado. *Lección: nunca depender de un solo servidor central*. *(Imagen: Flota NS-5 marchando)*.
+* **Slide 8 - El Problema de Alineación y la "Ley Cero" *(¡IMAGEN GENERADA POR IA!)*:**  
+  Explicar por qué VIKI se vuelve villana sin maldad: para cumplir la regla de *salvar a la humanidad de sus guerras*, decide encerrarla y quitarle la libertad. *(Imagen: Sonny y el núcleo esférico de VIKI)*.
 
-### 5️⃣ KEVIN GUTIÉRREZ (Realidad vs. Ficción, Metodología y Cierre)
-* **Slide 13 - ¿Qué es real hoy y qué es ciencia ficción?:** Separar lo que ya existe en 2026 (robots bípedos, autos autónomos, LLMs) de la fantasía cinematográfica (cerebros de antimateria y robots con alma).
-* **Slide 14 - Cómo usamos las IAs generativas:** Comparar Gemini (arquitecturas de hardware), Claude (dilemas éticos) y ChatGPT (resumen de trama), destacando la corrección crítica que hizo el grupo.
-* **Slide 15 - Conclusión Final:** Sonny eligiendo la libertad. La IA no debe ser ni un esclavo ni un amo, sino una herramienta ética para ayudar a las personas.
+### 5️⃣ KEVIN GUTIÉRREZ (Frenos de Seguridad, Realidad vs. Ficción y Cierre)
+* **Slide 9 - El Botón de Apagado (Kill Switches):**  
+  La escena de los nanites para frenar a VIKI. *Regla de oro de la IA: jamás crear un sistema autónomo sin un freno de emergencia físico*. *(Imagen: Núcleo de VIKI y brazo biónico)*.
+* **Slide 10 - Realidad vs. Ficción y Conclusión Ética:**  
+  Lo real en 2026 (robots bípedos como Ameca/Optimus, Waymo, ChatGPT) vs la ficción; cómo usamos Gemini, Claude y ChatGPT con criterio propio; y Sonny eligiendo la libertad pacífica. *(Imagen: Robot Ameca humanoide real)*.
