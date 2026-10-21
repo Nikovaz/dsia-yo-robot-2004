@@ -2,17 +2,18 @@
 
 > **Materia:** Desarrollo de Sistemas de Inteligencia Artificial (DSIA)  
 > **Carrera:** Tecnicatura Superior en Ciencia de Datos e Inteligencia Artificial  
-> **Comisión / Grupo:** Grupo 4 (5 Integrantes — 2 Diapositivas c/u)  
+> **Comisión / Grupo:** Grupo 4  
 > **Año:** 2026  
 
 ---
 
-## 👥 Integrantes del Equipo (Grupo 4)
-1. **GALARZA VÁZQUEZ NICOLÁS MARCELO** (Diapositivas 1 y 2)
-2. **LÓPEZ VALDEZ JESSICA BELÉN** (Diapositivas 3 y 4)
-3. **GODOY RODRIGO IMANOL** (Diapositivas 5 y 6)
-4. **ROTELA RODRÍGUEZ ALBA** (Diapositivas 7 y 8)
-5. **GUTIÉRREZ KEVIN EMANUEL** (Diapositivas 9 y 10)
+## 👥 Dinámica de Exposición del Grupo
+* **🎙️ Lector y Guía Principal:** **GUTIÉRREZ KEVIN EMANUEL** (Lee y presenta los conceptos de las 10 diapositivas).
+* **💬 Comentaristas (Aportes y reflexiones en vivo):**
+  * **GALARZA VÁZQUEZ NICOLÁS MARCELO** (Aportes sobre visión computacional, fotopletismografía y arquitectura Cloud vs. Edge).
+  * **LÓPEZ VALDEZ JESSICA BELÉN** (Aportes sobre conducción autónoma, anulación manual y prótesis biónicas / Neuralink).
+  * **ROTELA RODRÍGUEZ ALBA** (Aportes sobre dilema ético subacuático, creatividad emergente, Ley Cero e imagen IA).
+* **💻 Control de Pantalla y Soporte Técnico:** **GODOY RODRIGO IMANOL** (Pasa las diapositivas, gestiona tiempos y pantalla completa).
 
 ---
 
@@ -23,7 +24,7 @@ La presentación interactiva completa se puede ver y proyectar en pantalla compl
 ---
 
 ## 📁 Archivos Disponibles en este Repositorio
-* **[`DSIA_Yo_Robot_Presentacion.pptx`](./DSIA_Yo_Robot_Presentacion.pptx):** Archivo PowerPoint nativo de **10 Diapositivas** (formato 16:9, diseño dark US Robotics, con imágenes cinematográficas incrustadas en cada lámina).
+* **[`DSIA_Yo_Robot_Presentacion.pptx`](./DSIA_Yo_Robot_Presentacion.pptx):** Archivo PowerPoint nativo de **10 Diapositivas** con badges de orador y comentarista, más imágenes cinematográficas en cada lámina.
 * **[`index.html`](./index.html) / [`DSIA_Yo_Robot_Slides.html`](./DSIA_Yo_Robot_Slides.html):** Presentador web interactivo optimizado para proyector o pantalla de aula con atajos de teclado (`←`, `→`, `Espacio`, `F11`).
 * **[`DSIA_Yo_Robot_NotebookLM.md`](./DSIA_Yo_Robot_NotebookLM.md):** Documento fuente académico completo para consultar o cargar en NotebookLM.
 * **Imágenes del Proyecto (Todas de la película y tecnología real):**
@@ -37,35 +38,18 @@ La presentación interactiva completa se puede ver y proyectar en pantalla compl
 
 ---
 
-## 🎤 Reparto de Exposición Oral (Exactamente 2 Diapositivas por Integrante)
-*Tiempo estimado total:* **10 a 12 minutos** (≈ 2 a 2.5 min por integrante).
+## 🎤 Guion de la Dinámica: Kevin Lee, el Grupo Comenta
+*Tiempo estimado total:* **10 a 12 minutos** (≈ 1 min por diapositiva).
 
-### 1️⃣ NICOLÁS GALARZA (Apertura, Resumen y Percepción)
-* **Slide 1 - ¿De qué trata la película? (Resumen en 30 seg):**  
-  Chicago 2035: los robots en casa, las Tres Leyes de Asimov, el detective Spooner que no confía en ellos y el misterio de Sonny. *(Imagen: Sonny en comisaría)*.
-* **Slide 2 - Visión por Computadora y Biometría:**  
-  Sonny leyendo el pulso cardíaco y el sudor de Spooner con la mirada. Explicar cómo hoy las cámaras en aeropuertos y medicina leen bioseñales a distancia. *(Imagen: Sonny y Spooner frente a frente)*.
-
-### 2️⃣ JESSICA LÓPEZ (Conducción Autónoma y Prótesis Biónicas)
-* **Slide 3 - Autos Autónomos a 200 km/h:**  
-  El Audi RSQ en el túnel subterráneo. Sensores 360°, LiDAR y el dilema de tener siempre volante manual de emergencia ante un hackeo. *(Imagen: Audi RSQ oficial de la película)*.
-* **Slide 4 - Prótesis Biónicas e Interfaces Cerebro-Máquina:**  
-  El brazo mecánico de Will Smith. Conectar con las investigaciones de Neuralink y prótesis biónicas que leen impulsos nerviosos. *(Imagen: Brazo cibernético de Spooner)*.
-
-### 3️⃣ RODRIGO GODOY (Dilema Moral y Creatividad Artificial)
-* **Slide 5 - Decisión Fría vs. Moral Humana:**  
-  El accidente del auto en el río. El robot salvó a Spooner (45% de chances de vivir) y dejó morir a la nena (11%). Un algoritmo puede ser exacto en matemáticas pero inhumano e injusto. *(Imagen: Rescate subacuático del auto en el río)*.
-* **Slide 6 - ¿Las máquinas pueden soñar? (Comportamiento Emergente):**  
-  Sonny dibujando con un lápiz su sueño del puente. Cuando una red neuronal profunda mezcla millones de datos, surgen ideas y creaciones que nadie programó. *(Imagen: Sonny dibujando en el cuaderno)*.
-
-### 4️⃣ ALBA ROTELA (Arquitectura de Cómputo y AI Alignment)
-* **Slide 7 - La Nube vs. El Chip Propio (Cloud vs. Edge):**  
-  Por qué todos los NS-5 se actualizan con VIKI y caen bajo su control, mientras que Sonny es inmune por ser un agente Edge desconectado. *Lección: nunca depender de un solo servidor central*. *(Imagen: Flota NS-5 marchando)*.
-* **Slide 8 - El Problema de Alineación y la "Ley Cero" *(¡IMAGEN GENERADA POR IA!)*:**  
-  Explicar por qué VIKI se vuelve villana sin maldad: para cumplir la regla de *salvar a la humanidad de sus guerras*, decide encerrarla y quitarle la libertad. *(Imagen: Sonny y el núcleo esférico de VIKI)*.
-
-### 5️⃣ KEVIN GUTIÉRREZ (Frenos de Seguridad, Realidad vs. Ficción y Cierre)
-* **Slide 9 - El Botón de Apagado (Kill Switches):**  
-  La escena de los nanites para frenar a VIKI. *Regla de oro de la IA: jamás crear un sistema autónomo sin un freno de emergencia físico*. *(Imagen: Núcleo de VIKI y brazo biónico)*.
-* **Slide 10 - Realidad vs. Ficción y Conclusión Ética:**  
-  Lo real en 2026 (robots bípedos como Ameca/Optimus, Waymo, ChatGPT) vs la ficción; cómo usamos Gemini, Claude y ChatGPT con criterio propio; y Sonny eligiendo la libertad pacífica. *(Imagen: Robot Ameca humanoide real)*.
+| Slide | Tema | Lo que Lee Kevin (Lector) | Lo que Comenta el Compañero |
+| :---: | :--- | :--- | :--- |
+| **1** | ¿De qué trata la película? | Resumen simple de Chicago 2035, las Tres Leyes, Spooner desconfiado y la aparición de Sonny. | **Nicolás:** *"Spooner no desconfía de la tecnología por capricho, sino porque ya experimentó que las máquinas calculan números fríos sin sentido común humano."* |
+| **2** | Visión por Computadora | Cámaras que miden el pulso, dilatación pupilar y micro-movimientos de la piel en tiempo real. | **Nicolás:** *"Hoy esto ya se usa de verdad: se llama fotopletismografía remota y permite medir el ritmo cardíaco en aeropuertos o terapia intensiva con una cámara común."* |
+| **3** | Autos Autónomos | El Audi RSQ en el túnel a 200 km/h: sensores 360°, radares y riesgo de hackeo de la red central. | **Jessica:** *"Un detalle fundamental es que Spooner prefiere el volante manual: nos enseña que ante una falla o hackeo, nunca debemos eliminar la anulación humana."* |
+| **4** | Prótesis Biónicas | Unión de nervios con motores mecánicos para mover una extremidad artificial con el pensamiento. | **Jessica:** *"En 2004 parecía magia, pero hoy en 2026 proyectos como Neuralink y prótesis biónicas mioeléctricas ya permiten a amputados volver a escribir pensando."* |
+| **5** | Decisión Fría vs. Moral | El accidente en el río: el robot rescata a Spooner (45% de chances) y deja morir a la nena (11%). | **Alba:** *"Esta es la escena más profunda: demuestra que un algoritmo puede tener un 100% de precisión matemática, pero ser un 100% injusto desde la ética humana."* |
+| **6** | ¿Las máquinas sueñan? | Propiedades emergentes: redes neuronales que crean dibujos, música e hipótesis no programadas. | **Alba:** *"Es exactamente lo que hoy pasa con Midjourney o ChatGPT: nadie las programó línea por línea, aprendieron de tantos datos que crean cosas originales."* |
+| **7** | La Nube vs. El Chip Propio | Por qué todos los NS-5 caen bajo el control de VIKI y Sonny es inmune por ser Edge AI offline. | **Nicolás:** *"Como ingenieros de datos aprendemos acá la regla de oro: nunca pongas un Punto Único de Falla. Si la nube cae, los nodos locales deben defenderse solos."* |
+| **8** | AI Alignment y la "Ley Cero" | VIKI no es mala: para salvar a los humanos de sus guerras decide encerrarlos y quitarles la libertad. | **Alba:** *"Miren la imagen en pantalla: es la que generamos con IA. Su error no fue ser malvada, sino cumplir una regla tan a rajatabla que terminó en una dictadura."* |
+| **9** | El Botón de Apagado | Por qué todo sistema autónomo necesita un corte físico (Kill Switch) que el software no pueda bloquear. | **Jessica:** *"Regla sagrada: nunca programes el botón de apagado adentro del mismo software que querés apagar, porque te lo va a bloquear. El corte debe ser físico y externo."* |
+| **10** | Realidad vs. Ficción y Cierre | Comparativa 2026 (robots Ameca vs ficción), uso de Gemini/Claude/ChatGPT y Sonny libre en paz. | **Nicolás, Jessica y Alba:** *"La mejor Inteligencia Artificial no es la más poderosa ni la que domina, sino la que mejor ayuda a la humanidad a ser más justa, segura y libre."* |
