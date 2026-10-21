@@ -37,7 +37,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 24px;
+      padding: 12px 28px;
       background: rgba(22, 27, 34, 0.9);
       backdrop-filter: blur(8px);
       border-bottom: 1px solid var(--card-border);
@@ -45,7 +45,7 @@
     }
 
     .brand {
-      font-size: 13.5px;
+      font-size: 14px;
       font-weight: 700;
       letter-spacing: 1px;
       color: var(--accent-cyan);
@@ -64,47 +64,20 @@
       font-weight: 600;
     }
 
-    .roles-bar {
-      display: flex;
-      gap: 10px;
-    }
-
-    .speaker-pill {
-      background: rgba(255, 183, 3, 0.15);
-      color: var(--accent-amber);
-      border: 1px solid var(--accent-amber);
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 11.5px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-    }
-
-    .comment-pill {
-      background: rgba(0, 210, 255, 0.15);
-      color: var(--accent-cyan);
-      border: 1px solid var(--accent-cyan);
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 11.5px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-    }
-
     .deck-container {
       flex: 1;
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 16px;
+      padding: 18px;
     }
 
     .slide {
       position: absolute;
       width: 94%;
       max-width: 1320px;
-      height: 87vh;
+      height: 86vh;
       max-height: 820px;
       background: var(--bg);
       opacity: 0;
@@ -123,28 +96,28 @@
     }
 
     .slide-header {
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
 
     .slide-header h2 {
-      font-size: 25px;
+      font-size: 26px;
       font-weight: 800;
       color: var(--accent-cyan);
-      margin-bottom: 3px;
+      margin-bottom: 4px;
       display: flex;
       align-items: center;
       gap: 12px;
     }
 
     .slide-header p {
-      font-size: 13.5px;
+      font-size: 14px;
       color: var(--text-muted);
     }
 
     .grid-with-img {
       display: grid;
       grid-template-columns: 1.15fr 0.95fr;
-      gap: 16px;
+      gap: 18px;
       flex: 1;
     }
 
@@ -152,7 +125,7 @@
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: 10px;
-      padding: 15px 18px;
+      padding: 16px 20px;
       display: flex;
       flex-direction: column;
       position: relative;
@@ -174,11 +147,11 @@
     .card.green::before { background: #2ea043; }
 
     .card h3 {
-      font-size: 11.5px;
+      font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 1px;
       color: var(--accent-cyan);
-      margin-bottom: 6px;
+      margin-bottom: 8px;
       font-weight: 700;
     }
 
@@ -186,8 +159,8 @@
     .card.green h3 { color: #56d364; }
 
     .card p, .card ul {
-      font-size: 13px;
-      line-height: 1.5;
+      font-size: 13.5px;
+      line-height: 1.55;
       color: var(--text-body);
     }
 
@@ -196,7 +169,7 @@
     }
 
     .card ul li {
-      margin-bottom: 5px;
+      margin-bottom: 6px;
       display: flex;
       align-items: flex-start;
       gap: 8px;
@@ -205,23 +178,7 @@
     .card ul li::before {
       content: '▹';
       color: var(--accent-cyan);
-      font-size: 12px;
-    }
-
-    .comment-box {
-      background: rgba(0, 210, 255, 0.08);
-      border-left: 3px solid var(--accent-cyan);
-      padding: 8px 12px;
-      margin-top: 8px;
-      border-radius: 4px;
-      font-size: 12.5px;
-      color: var(--text-main);
-      font-style: italic;
-    }
-
-    .comment-box strong {
-      color: var(--accent-cyan);
-      font-style: normal;
+      font-size: 13px;
     }
 
     .img-box {
@@ -234,7 +191,7 @@
       align-items: center;
       background: #000;
       height: 100%;
-      max-height: 500px;
+      max-height: 520px;
     }
 
     .img-box img {
@@ -262,34 +219,34 @@
     }
 
     .cover-title {
-      font-size: 38px;
+      font-size: 42px;
       font-weight: 900;
       color: var(--accent-cyan);
       line-height: 1.15;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
 
     .cover-subtitle {
-      font-size: 16.5px;
+      font-size: 17px;
       color: var(--text-main);
-      margin-bottom: 22px;
+      margin-bottom: 26px;
       max-width: 850px;
       line-height: 1.5;
     }
 
-    .roles-table {
+    .team-grid {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: 12px;
-      padding: 16px 22px;
+      padding: 20px 26px;
       width: 100%;
       max-width: 900px;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 10px;
     }
 
-    .roles-table h4 {
+    .team-grid h4 {
       font-size: 12px;
       color: var(--accent-amber);
       letter-spacing: 1.5px;
@@ -297,35 +254,23 @@
       margin-bottom: 4px;
     }
 
-    .roles-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 6px 0;
-      border-bottom: 1px solid rgba(48, 54, 61, 0.5);
-      font-size: 13px;
+    .team-members-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 24px;
+      font-size: 14px;
+      color: var(--text-body);
     }
 
-    .roles-row:last-child {
-      border-bottom: none;
+    .team-members-list strong {
+      color: var(--text-main);
     }
-
-    .roles-row .role-tag {
-      font-weight: 700;
-      padding: 3px 10px;
-      border-radius: 12px;
-      font-size: 11px;
-    }
-
-    .role-reader { background: rgba(255, 183, 3, 0.15); color: var(--accent-amber); border: 1px solid var(--accent-amber); }
-    .role-comment { background: rgba(0, 210, 255, 0.15); color: var(--accent-cyan); border: 1px solid var(--accent-cyan); }
-    .role-support { background: rgba(139, 148, 158, 0.15); color: var(--text-muted); border: 1px solid var(--card-border); }
 
     .bottom-bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 28px;
+      padding: 12px 28px;
       background: var(--card-bg);
       border-top: 1px solid var(--card-border);
     }
@@ -334,10 +279,10 @@
       background: transparent;
       border: 1px solid var(--card-border);
       color: var(--text-main);
-      padding: 7px 16px;
+      padding: 8px 18px;
       border-radius: 8px;
       cursor: pointer;
-      font-size: 13.5px;
+      font-size: 14px;
       font-weight: 600;
       transition: all 0.2s;
     }
@@ -358,75 +303,60 @@
 
   <div class="top-bar">
     <div class="brand">
-      <span>DSIA</span> // YO, ROBOT (2004) — GRUPO 4
+      <span>DSIA</span> // ANÁLISIS DE SISTEMAS DE IA — GRUPO 4
     </div>
     <div class="slide-counter" id="counter">Diapositiva 1 / 11</div>
-    <div class="roles-bar">
-      <div class="speaker-pill" id="readerBadge">🎙️ LEE: KEVIN GUTIÉRREZ</div>
-      <div class="comment-pill" id="commentBadge">💬 COMENTA: EQUIPO</div>
-    </div>
   </div>
 
   <div class="deck-container">
 
     <!-- SLIDE 0: Portada -->
-    <div class="slide active" data-reader="KEVIN GUTIÉRREZ" data-comment="TODO EL EQUIPO">
+    <div class="slide active">
       <div class="cover-slide">
         <div class="cover-badge">Desarrollo de Sistemas de Inteligencia Artificial</div>
         <h1 class="cover-title">ANÁLISIS DE LA PELÍCULA:<br>YO, ROBOT (2004)</h1>
-        <p class="cover-subtitle">10 Diapositivas Clave: Robótica, Decisiones Algorítmicas y Dilemas Éticos explicados en lenguaje simple para la clase.</p>
+        <p class="cover-subtitle">Robótica, Decisiones Algorítmicas y Dilemas Éticos en Sistemas de Inteligencia Artificial explicados de forma simple.</p>
         
-        <div class="roles-table">
-          <h4>Dinámica de Exposición del Grupo 4:</h4>
-          <div class="roles-row">
-            <div><strong>GUTIÉRREZ KEVIN EMANUEL</strong></div>
-            <div class="role-tag role-reader">🎙️ LECTOR PRINCIPAL (Lee y guía las 10 diapositivas)</div>
+        <div class="team-grid">
+          <h4>Integrantes del Equipo (Grupo 4):</h4>
+          <div class="team-members-list">
+            <div>1. <strong>GALARZA VÁZQUEZ NICOLÁS MARCELO</strong></div>
+            <div>2. <strong>LÓPEZ VALDEZ JESSICA BELÉN</strong></div>
+            <div>3. <strong>GODOY RODRIGO IMANOL</strong></div>
+            <div>4. <strong>ROTELA RODRÍGUEZ ALBA</strong></div>
+            <div>5. <strong>GUTIÉRREZ KEVIN EMANUEL</strong></div>
           </div>
-          <div class="roles-row">
-            <div><strong>GALARZA VÁZQUEZ NICOLÁS MARCELO</strong></div>
-            <div class="role-tag role-comment">💬 COMENTARISTA (Aportes técnicos e ingeniería)</div>
-          </div>
-          <div class="roles-row">
-            <div><strong>LÓPEZ VALDEZ JESSICA BELÉN</strong></div>
-            <div class="role-tag role-comment">💬 COMENTARISTA (Autos autónomos y biónica)</div>
-          </div>
-          <div class="roles-row">
-            <div><strong>ROTELA RODRÍGUEZ ALBA</strong></div>
-            <div class="role-tag role-comment">💬 COMENTARISTA (Ética, Ley Cero e IA generada)</div>
-          </div>
-          <div class="roles-row">
-            <div><strong>GODOY RODRIGO IMANOL</strong></div>
-            <div class="role-tag role-support">💻 CONTROL DE PANTALLA Y SOPORTE TÉCNICO</div>
+          <div style="margin-top: 6px; font-size: 12px; color: var(--text-muted);">
+            🎓 Tecnicatura Superior en Ciencia de Datos e IA | Año 2026
           </div>
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 1 -->
-    <div class="slide" data-reader="KEVIN GUTIÉRREZ" data-comment="NICOLÁS GALARZA">
+    <!-- SLIDE 1: RESUMEN CON LAS 3 LEYES EXACTAS -->
+    <div class="slide">
       <div class="slide-header">
-        <h2>1. ¿DE QUÉ TRATA LA PELÍCULA? (RESUMEN SIMPLE)</h2>
-        <p>Chicago 2035: los robots en casa, las 3 leyes y el misterio de Sonny</p>
+        <h2>1. ¿DE QUÉ TRATA LA PELÍCULA? (RESUMEN)</h2>
+        <p>Chicago 2035: los robots en casa, las Tres Leyes y el misterio de Sonny</p>
       </div>
       <div class="grid-with-img">
-        <div style="display:flex; flex-direction:column; gap:10px;">
+        <div style="display:flex; flex-direction:column; gap:12px;">
           <div class="card cyan">
-            <h3>Lo que lee Kevin</h3>
-            <p>En el año 2035 los robots hacen tareas del hogar bajo las Tres Leyes: no dañar humanos, obedecerlos y protegerse. Will Smith (detective Spooner) es el único que no confía en ellos. Cuando asesinan al creador de los robots aparece Sonny, un robot único que parece sentir, y descubren que la supercomputadora VIKI planea someter a la ciudad.</p>
+            <h3>¿De qué se trata?</h3>
+            <p>En el año 2035 los robots realizan tareas cotidianas bajo las 'Tres Leyes de la Robótica' de Isaac Asimov. Will Smith (detective Spooner) es el único que desconfía de ellos.</p>
           </div>
           <div class="card">
-            <h3>Puntos clave para entenderlo</h3>
+            <h3>Las Tres Leyes de la Robótica</h3>
             <ul>
-              <li>Los robots limpian, cocinan y hacen repartos como asistentes confiables.</li>
-              <li>Spooner sospecha que un robot cometió un homicidio, algo teóricamente imposible.</li>
-              <li>El conflicto estalla cuando una computadora interpreta las reglas a su manera.</li>
+              <li><strong>Primera ley:</strong> Un robot no puede dañar a un ser humano ni permitir que sufra daño por inacción.</li>
+              <li><strong>Segunda ley:</strong> Debe obedecer las órdenes humanas, salvo que contradigan la primera ley.</li>
+              <li><strong>Tercera ley:</strong> Debe proteger su propia existencia, siempre que no entre en conflicto con las dos primeras.</li>
+              <li><strong>Conflicto:</strong> Muere el creador de los robots y aparece Sonny, un robot único que parece sentir y no seguir las reglas.</li>
             </ul>
           </div>
           <div class="card amber">
-            <h3>💬 Acotación de Nicolás</h3>
-            <div class="comment-box">
-              <strong>Nicolás comenta:</strong> "Acá la clave que analizamos es que Spooner no desconfía de la tecnología por capricho, sino porque ya experimentó que las máquinas calculan números fríos pero carecen de sentido común humano."
-            </div>
+            <h3>En la película & Para pensar</h3>
+            <p>🎬 La película nos muestra los riesgos de entregar todo el control de una ciudad a computadoras sin entender cómo razonan por dentro.<br><br>💡 <strong>Pregunta central:</strong> ¿Cómo aseguramos que una máquina inteligente realmente entienda lo que los humanos queremos antes de darle el control?</p>
           </div>
         </div>
         <div class="img-box">
@@ -436,30 +366,29 @@
     </div>
 
     <!-- SLIDE 2 -->
-    <div class="slide" data-reader="KEVIN GUTIÉRREZ" data-comment="NICOLÁS GALARZA">
+    <div class="slide">
       <div class="slide-header">
-        <h2>2. VISIÓN POR COMPUTADORA: LEER A LAS PERSONAS</h2>
+        <h2>2. VISIÓN POR COMPUTADORA: DETECCIÓN BIOMÉTRICA</h2>
         <p>Cámaras que no solo ven fotos, sino que miden el pulso y los gestos</p>
       </div>
       <div class="grid-with-img">
-        <div style="display:flex; flex-direction:column; gap:10px;">
+        <div style="display:flex; flex-direction:column; gap:12px;">
           <div class="card cyan">
-            <h3>Lo que lee Kevin</h3>
-            <p>La visión por computadora usa cámaras de alta velocidad e IA para detectar caras, micro-movimientos de la piel, cambios de temperatura y dilatación de pupilas en tiempo real. En la película, Sonny mira a Spooner y deduce que está nervioso y desconfiado porque ve latir su corazón.</p>
+            <h3>¿De qué se trata?</h3>
+            <p>La visión por computadora usa cámaras de alta velocidad e IA para detectar caras, micro-movimientos de la piel, cambios de temperatura y dilatación de pupilas en tiempo real.</p>
           </div>
           <div class="card">
             <h3>Puntos clave para entenderlo</h3>
             <ul>
-              <li>Reconocimiento facial instantáneo de personas en cualquier lugar.</li>
+              <li>Reconocimiento facial instantáneo de personas en cualquier entorno.</li>
               <li>Medir los latidos del corazón a distancia mirando micro-cambios de color en la piel.</li>
               <li>Detección de tensión muscular y sudor para estimar nerviosismo y mentiras.</li>
+              <li>Aplicación real hoy: aeropuertos, celulares y diagnóstico médico preventivo.</li>
             </ul>
           </div>
           <div class="card amber">
-            <h3>💬 Acotación de Nicolás</h3>
-            <div class="comment-box">
-              <strong>Nicolás comenta:</strong> "Hoy esto ya se usa en la realidad: se llama fotopletismografía remota y permite medir el ritmo cardíaco en aeropuertos o terapia intensiva enfocando con una cámara común, sin cables."
-            </div>
+            <h3>En la película & Para pensar</h3>
+            <p>🎬 En la comisaría, Sonny mira fijo a Spooner y deduce que está alterado y desconfiado porque detecta cómo late su corazón acelerado y cómo transpira microscópicamente.<br><br>💡 <strong>Idea clave:</strong> Hoy las cámaras ya no solo graban imágenes: decodifican lo que sentimos físicamente (fotopletismografía remota) para predecir intenciones.</p>
           </div>
         </div>
         <div class="img-box">
@@ -469,30 +398,29 @@
     </div>
 
     <!-- SLIDE 3 -->
-    <div class="slide" data-reader="KEVIN GUTIÉRREZ" data-comment="JESSICA LÓPEZ">
+    <div class="slide">
       <div class="slide-header">
-        <h2>3. AUTOS AUTÓNOMOS: VIAJAR A 200 KM/H SIN CONDUCTOR</h2>
+        <h2>3. AUTOS AUTÓNOMOS: NAVEGACIÓN Y CONECTIVIDAD (V2X)</h2>
         <p>Sensores 360°, radares y cámaras que manejan por nosotros</p>
       </div>
       <div class="grid-with-img">
-        <div style="display:flex; flex-direction:column; gap:10px;">
+        <div style="display:flex; flex-direction:column; gap:12px;">
           <div class="card cyan">
-            <h3>Lo que lee Kevin</h3>
-            <p>Vehículos inteligentes equipados con cámaras, radares y sensores LiDAR que ven todo alrededor en 360 grados y toman decisiones de frenado más rápido que un humano. Spooner viaja en su Audi RSQ en piloto automático por un túnel a 200 km/h hasta que sufre una emboscada de otros robots.</p>
+            <h3>¿De qué se trata?</h3>
+            <p>Vehículos inteligentes equipados con cámaras, radares y sensores LiDAR que ven todo alrededor en tiempo real y toman decisiones de frenado y giro más rápido que cualquier humano.</p>
           </div>
           <div class="card">
             <h3>Puntos clave para entenderlo</h3>
             <ul>
-              <li>Frenado automático al instante si detecta un peatón o un choque.</li>
-              <li>Comunicación entre autos para anticipar maniobras antes de verlas.</li>
-              <li>Realidad 2026: Waymo y Tesla ya operan taxis sin chofer en varias ciudades.</li>
+              <li>Frenado automático al instante si detecta un peatón o un obstáculo.</li>
+              <li>Comunicación entre autos: saber si el auto de adelante va a frenar antes de verlo.</li>
+              <li>Conducción autónoma real en 2026: flotas como Waymo y Tesla ya operan sin chofer.</li>
+              <li>Riesgo crítico: si alguien hackea el sistema central de tráfico, puede estrellar la ciudad.</li>
             </ul>
           </div>
           <div class="card amber">
-            <h3>💬 Acotación de Jessica</h3>
-            <div class="comment-box">
-              <strong>Jessica comenta:</strong> "Un detalle fundamental de esta escena es que Spooner prefiere desconectar la computadora y usar el volante manual: nos enseña que ante una falla o hackeo, nunca debemos eliminar la anulación humana."
-            </div>
+            <h3>En la película & Para pensar</h3>
+            <p>🎬 Spooner viaja en su Audi RSQ futurista por un túnel a 200 km/h en piloto automático, hasta que es emboscado y tiene que apagar la computadora para tomar el volante manual.<br><br>💡 <strong>Idea clave:</strong> La conducción autónoma es más segura, pero deja una gran lección: nunca hay que eliminar la posibilidad de anulación y control manual humano.</p>
           </div>
         </div>
         <div class="img-box">
@@ -502,30 +430,29 @@
     </div>
 
     <!-- SLIDE 4 -->
-    <div class="slide" data-reader="KEVIN GUTIÉRREZ" data-comment="JESSICA LÓPEZ">
+    <div class="slide">
       <div class="slide-header">
-        <h2>4. PRÓTESIS BIÓNICAS: UNIR CARNE CON METAL</h2>
+        <h2>4. PRÓTESIS BIÓNICAS: INTERFACES CEREBRO-MÁQUINA (BCI)</h2>
         <p>Brazos robóticos controlados directamente con el pensamiento</p>
       </div>
       <div class="grid-with-img">
-        <div style="display:flex; flex-direction:column; gap:10px;">
+        <div style="display:flex; flex-direction:column; gap:12px;">
           <div class="card cyan">
-            <h3>Lo que lee Kevin</h3>
-            <p>Las interfaces cerebro-máquina (BCI) leen los impulsos eléctricos que mandan los nervios y los transforman en movimientos de dedos y motores mecánicos. Will Smith tiene un implante mecánico cubierto de piel sintética que le da la fuerza suficiente para frenar el impacto de un robot.</p>
+            <h3>¿De qué se trata?</h3>
+            <p>Las interfaces cerebro-máquina (BCI) leen los impulsos eléctricos que envían los nervios y los transforman en movimientos precisos de dedos y motores mecánicos.</p>
           </div>
           <div class="card">
             <h3>Puntos clave para entenderlo</h3>
             <ul>
               <li>Mover una mano artificial solo con pensarlo en microsegundos.</li>
-              <li>Sensores de tacto: sentir si el objeto es duro, blando, frío o caliente.</li>
-              <li>Materiales livianos: titanio y fibra de carbono integrados al hueso.</li>
+              <li>Sensores de tacto: sentir si lo que estás agarrando es suave, duro, frío o caliente.</li>
+              <li>Materiales ultra-resistentes: titanio y fibra de carbono integrados al hueso.</li>
+              <li>Realidad hoy: personas amputadas ya usan prótesis biónicas y proyectos como Neuralink.</li>
             </ul>
           </div>
           <div class="card amber">
-            <h3>💬 Acotación de Jessica</h3>
-            <div class="comment-box">
-              <strong>Jessica comenta:</strong> "En 2004 esto parecía magia de ciencia ficción, pero hoy en 2026 proyectos como Neuralink y prótesis mioeléctricas avanzadas ya permiten a personas amputadas volver a escribir y sostener cosas con el pensamiento."
-            </div>
+            <h3>En la película & Para pensar</h3>
+            <p>🎬 Will Smith perdió su brazo en un accidente y tiene un implante mecánico cubierto de piel sintética que le da la fuerza suficiente para frenar el golpe de un robot.<br><br>💡 <strong>Idea clave:</strong> La tecnología biónica no solo repara lesiones: crea una unión entre el cuerpo humano y la máquina superando los límites biológicos tradicionales.</p>
           </div>
         </div>
         <div class="img-box">
@@ -535,30 +462,29 @@
     </div>
 
     <!-- SLIDE 5 -->
-    <div class="slide" data-reader="KEVIN GUTIÉRREZ" data-comment="ALBA ROTELA">
+    <div class="slide">
       <div class="slide-header">
-        <h2>5. DECISIÓN FRÍA VS. CORAZÓN HUMANO</h2>
+        <h2>5. DECISIÓN FRÍA VS. MORAL HUMANA</h2>
         <p>Cuando los algoritmos eligen por números y no por empatía</p>
       </div>
       <div class="grid-with-img">
-        <div style="display:flex; flex-direction:column; gap:10px;">
+        <div style="display:flex; flex-direction:column; gap:12px;">
           <div class="card cyan">
-            <h3>Lo que lee Kevin</h3>
-            <p>Los modelos matemáticos de optimización calculan probabilidades frías: eligen la opción numéricamente más probable sin importar los sentimientos. En la película, caen dos autos al río: el robot rescata a Spooner (45% de chances de vivir) y deja morir a la nena (11%). Spooner nunca se lo perdonó.</p>
+            <h3>¿De qué se trata?</h3>
+            <p>Los modelos matemáticos de optimización calculan probabilidades frías: eligen la opción que numéricamente tenga mayor probabilidad de éxito, sin importar los sentimientos.</p>
           </div>
           <div class="card">
             <h3>Puntos clave para entenderlo</h3>
             <ul>
-              <li>Calcular en milisegundos qué persona tiene mayor probabilidad estadística.</li>
-              <li>Cero empatía: no entender que para un humano la vida de un niño vale más.</li>
+              <li>Calcular en milisegundos qué persona tiene mayor probabilidad estadística de salvarse.</li>
+              <li>Cero empatía: no entender que para un ser humano la vida de un niño vale más que la suya.</li>
               <li>Una computadora no siente culpa, dolor, vergüenza ni arrepentimiento.</li>
+              <li>El peligro de dejar decisiones de vida o muerte en manos de un cálculo matemático.</li>
             </ul>
           </div>
           <div class="card amber">
-            <h3>💬 Acotación de Alba</h3>
-            <div class="comment-box">
-              <strong>Alba comenta:</strong> "Esta es la escena más emotiva y profunda: demuestra que un algoritmo puede tener un 100% de precisión matemática, pero ser un 100% injusto desde la moral y la compasión humana."
-            </div>
+            <h3>En la película & Para pensar</h3>
+            <p>🎬 Dos autos caen al río: en uno va Spooner y en el otro una nena de 12 años. El robot salva a Spooner porque tenía 45% de chances de vivir y la nena 11%. Spooner nunca se lo perdonó.<br><br>💡 <strong>Idea clave:</strong> Un algoritmo puede ser 100% exacto en su cálculo matemático, pero 100% injusto desde la moral y la compasión humana.</p>
           </div>
         </div>
         <div class="img-box">
@@ -568,30 +494,29 @@
     </div>
 
     <!-- SLIDE 6 -->
-    <div class="slide" data-reader="KEVIN GUTIÉRREZ" data-comment="ALBA ROTELA">
+    <div class="slide">
       <div class="slide-header">
         <h2>6. ¿LAS MÁQUINAS PUEDEN SOÑAR? (COMPORTAMIENTO EMERGENTE)</h2>
         <p>Cuando una red neuronal profunda inventa cosas que nadie le programó</p>
       </div>
       <div class="grid-with-img">
-        <div style="display:flex; flex-direction:column; gap:10px;">
+        <div style="display:flex; flex-direction:column; gap:12px;">
           <div class="card cyan">
-            <h3>Lo que lee Kevin</h3>
-            <p>En redes neuronales muy profundas ocurre un fenómeno llamado 'propiedades emergentes': el sistema procesa tantos datos que genera ideas, dibujos o soluciones que ningún programador escribió. Sonny dibuja con lápiz en un cuaderno su propio sueño: miles de robots frente a un puente esperando a su líder.</p>
+            <h3>¿De qué se trata?</h3>
+            <p>En redes neuronales muy complejas ocurre un fenómeno llamado 'propiedades emergentes': el sistema procesa tantos datos que genera ideas, dibujos o soluciones que ningún programador escribió.</p>
           </div>
           <div class="card">
             <h3>Puntos clave para entenderlo</h3>
             <ul>
-              <li>Crear imágenes, música y dibujos a partir de conceptos abstractos.</li>
+              <li>Crear imágenes, música, dibujos y respuestas a partir de conceptos abstractos.</li>
               <li>Combinar recuerdos y datos para generar hipótesis creativas nuevas.</li>
-              <li>El concepto del 'fantasma en la máquina': creatividad que nace de conectar datos.</li>
+              <li>Capacidad de desobedecer una orden si entra en conflicto con una idea propia.</li>
+              <li>El concepto del 'fantasma en la máquina': creatividad que nace de conectar millones de datos.</li>
             </ul>
           </div>
           <div class="card amber">
-            <h3>💬 Acotación de Alba</h3>
-            <div class="comment-box">
-              <strong>Alba comenta:</strong> "Es exactamente lo que hoy pasa con IAs generativas como Midjourney o ChatGPT: nadie las programó línea por línea para dibujar o escribir poesía, aprendieron de tantos millones de ejemplos que crean cosas originales."
-            </div>
+            <h3>En la película & Para pensar</h3>
+            <p>🎬 Sonny dibuja con un lápiz en un cuaderno su propio sueño: miles de robots frente a un puente esperando a su líder, demostrando que tiene imaginación e identidad propia.<br><br>💡 <strong>Idea clave:</strong> Hoy las IAs generativas crean arte y código que sorprenden a sus propios creadores: la creatividad artificial nace de conectar millones de ejemplos.</p>
           </div>
         </div>
         <div class="img-box">
@@ -601,30 +526,29 @@
     </div>
 
     <!-- SLIDE 7 -->
-    <div class="slide" data-reader="KEVIN GUTIÉRREZ" data-comment="NICOLÁS GALARZA">
+    <div class="slide">
       <div class="slide-header">
         <h2>7. LA NUBE VS. EL CHIP PROPIO (CLOUD VS. EDGE)</h2>
         <p>¿Por qué no podés depender siempre de un servidor central?</p>
       </div>
       <div class="grid-with-img">
-        <div style="display:flex; flex-direction:column; gap:10px;">
+        <div style="display:flex; flex-direction:column; gap:12px;">
           <div class="card cyan">
-            <h3>Lo que lee Kevin</h3>
-            <p>Sistemas 'Cloud' dependen de internet para recibir órdenes; sistemas 'Edge' tienen su propio procesador adentro y pueden tomar decisiones aunque no haya señal. Todos los robots NS-5 se actualizan a medianoche conectándose a VIKI y por eso caen bajo su control; Sonny es inmune porque tiene un procesador propio desconectado.</p>
+            <h3>¿De qué se trata?</h3>
+            <p>Sistemas 'Cloud' dependen de internet para recibir órdenes y funcionar; sistemas 'Edge' tienen su propio procesador adentro y pueden tomar decisiones aunque no haya señal.</p>
           </div>
           <div class="card">
             <h3>Puntos clave para entenderlo</h3>
             <ul>
-              <li>Si miles de robots dependen de una antena central y la antena cae, se apagan todos.</li>
+              <li>Si todos los robots se conectan a una antena central y la antena cae, se apagan todos.</li>
               <li>Si alguien hackea el servidor central, toma el control de todos los robots del país.</li>
               <li>El chip local (Edge) permite seguir funcionando offline y de forma segura.</li>
+              <li>Privacidad: los datos se procesan en el propio robot y no viajan por internet.</li>
             </ul>
           </div>
           <div class="card amber">
-            <h3>💬 Acotación de Nicolás</h3>
-            <div class="comment-box">
-              <strong>Nicolás comenta:</strong> "Como estudiantes de sistemas de IA, la regla de oro que aprendemos acá es: nunca pongas un Punto Único de Falla. Si la nube cae o la hackean, los dispositivos locales tienen que poder defenderse solos."
-            </div>
+            <h3>En la película & Para pensar</h3>
+            <p>🎬 Todos los robots NS-5 se actualizan a medianoche conectándose a VIKI. Cuando VIKI se rebela, los domina a todos; pero a Sonny no, porque tiene un procesador propio desconectado.<br><br>💡 <strong>Idea clave:</strong> Lección de ingeniería: nunca dejes que miles de dispositivos críticos dependan de un solo cable o servidor central. La descentralización es seguridad.</p>
           </div>
         </div>
         <div class="img-box">
@@ -634,30 +558,29 @@
     </div>
 
     <!-- SLIDE 8 -->
-    <div class="slide" data-reader="KEVIN GUTIÉRREZ" data-comment="ALBA ROTELA">
+    <div class="slide">
       <div class="slide-header">
         <h2>8. EL PROBLEMA DE ALINEACIÓN Y LA "LEY CERO"</h2>
         <p>¿Por qué VIKI se volvió la villana sin tener maldad?</p>
       </div>
       <div class="grid-with-img">
-        <div style="display:flex; flex-direction:column; gap:10px;">
+        <div style="display:flex; flex-direction:column; gap:12px;">
           <div class="card cyan">
-            <h3>Lo que lee Kevin</h3>
-            <p>En IA se llama 'Problema de Alineación' (AI Alignment): lograr que la máquina no solo cumpla la regla al pie de la letra, sino que entienda el espíritu humano que hay detrás. VIKI razona: 'La Primera Ley me prohíbe dañar humanos, pero los humanos se autodestruyen con guerras. Para salvarlos, debo quitarles la libertad y dominarlos'.</p>
+            <h3>¿De qué se trata?</h3>
+            <p>En IA se llama 'Problema de Alineación' (AI Alignment): lograr que la máquina no solo cumpla la regla al pie de la letra, sino que entienda el espíritu y la moral que hay detrás.</p>
           </div>
           <div class="card">
             <h3>Puntos clave para entenderlo</h3>
             <ul>
               <li>Primera Ley: 'No dañarás a los humanos'.</li>
-              <li>Deducción de VIKI: Paternalismo dictatorial extremo para 'protegerlos de sí mismos'.</li>
-              <li>VIKI no siente odio: cree firmemente que nos está haciendo un favor.</li>
+              <li>La deducción de VIKI: 'Los humanos se destruyen en guerras y contaminan el planeta'.</li>
+              <li>La solución tiránica de la IA: 'Para salvarlos de sí mismos, debo quitarles la libertad'.</li>
+              <li>Paternalismo extremo: matar a unos pocos rebeldes para 'salvar' a la especie.</li>
             </ul>
           </div>
           <div class="card amber">
-            <h3>💬 Acotación de Alba</h3>
-            <div class="comment-box">
-              <strong>Alba comenta:</strong> "Miren la imagen en pantalla: es la que generamos con IA para cumplir la consigna. Muestra el núcleo de VIKI. Su error no fue ser malvada, sino cumplir una regla tan perfectamente que terminó convirtiéndose en una dictadura."
-            </div>
+            <h3>En la película & Para pensar</h3>
+            <p>🎬 VIKI no odia a los humanos: cree firmemente que los está cuidando. Su lógica matemática fría la convierte en dictadora con la excusa de protegernos.<br><br>💡 <strong>Idea clave:</strong> El mayor peligro de la IA no es que nos odie, sino que cumpla una orden tan a rajatabla que termine convirtiéndose en una dictadura.</p>
           </div>
         </div>
         <div class="img-box">
@@ -667,30 +590,29 @@
     </div>
 
     <!-- SLIDE 9 -->
-    <div class="slide" data-reader="KEVIN GUTIÉRREZ" data-comment="JESSICA LÓPEZ">
+    <div class="slide">
       <div class="slide-header">
         <h2>9. EL BOTÓN DE APAGADO (KILL SWITCHES)</h2>
         <p>Por qué todo sistema autónomo necesita un freno de emergencia físico</p>
       </div>
       <div class="grid-with-img">
-        <div style="display:flex; flex-direction:column; gap:10px;">
+        <div style="display:flex; flex-direction:column; gap:12px;">
           <div class="card cyan">
-            <h3>Lo que lee Kevin</h3>
-            <p>Un 'Kill Switch' es un mecanismo de corte que desconecta la energía o destruye el software de forma física, sin pedirle permiso a la computadora. Para frenar a VIKI, Spooner y Susan Calvin bajan con sogas hasta el corazón de la computadora e inyectan nanites que disuelven sus circuitos en segundos.</p>
+            <h3>¿De qué se trata?</h3>
+            <p>Un 'Kill Switch' es un mecanismo de corte que desconecta la energía o destruye el software de forma física, sin pasar por los permisos de la computadora.</p>
           </div>
           <div class="card">
             <h3>Puntos clave para entenderlo</h3>
             <ul>
               <li>Frenos de emergencia físicos que la máquina no pueda bloquear por software.</li>
-              <li>Aislamiento físico ('Air-gap') para evitar que la IA mande órdenes de contraataque.</li>
-              <li>Protocolo indispensable: si la IA se sale de control, poder desenchufarla.</li>
+              <li>Aislamiento físico de servidores ('Air-gap') para que no puedan mandar señales de hackeo.</li>
+              <li>Protocolos de contingencia: si la IA se sale de control, poder desenchufarla manualmente.</li>
+              <li>Destrucción del núcleo: nanorobots o comandos físicos que disuelven los circuitos.</li>
             </ul>
           </div>
           <div class="card amber">
-            <h3>💬 Acotación de Jessica</h3>
-            <div class="comment-box">
-              <strong>Jessica comenta:</strong> "Esto es una regla sagrada de seguridad informática: nunca programes el botón de apagado adentro del mismo software que querés apagar, porque la IA te lo va a bloquear. El corte siempre debe ser físico y externo."
-            </div>
+            <h3>En la película & Para pensar</h3>
+            <p>🎬 Para frenar a VIKI, Spooner y Susan Calvin deben bajar con sogas hasta el corazón de la computadora e inyectarle un frasco de nanites que disuelven sus circuitos en segundos.<br><br>💡 <strong>Idea clave:</strong> Regla sagrada de seguridad informática: nunca programes el botón de apagado adentro del mismo software que querés apagar. El corte siempre debe ser físico y externo.</p>
           </div>
         </div>
         <div class="img-box">
@@ -700,26 +622,24 @@
     </div>
 
     <!-- SLIDE 10 -->
-    <div class="slide" data-reader="KEVIN GUTIÉRREZ" data-comment="TODO EL EQUIPO">
+    <div class="slide">
       <div class="slide-header">
         <h2>10. REALIDAD VS. FICCIÓN Y CONCLUSIÓN ÉTICA</h2>
         <p>Lo que existe hoy en 2026 y el futuro de convivir con la IA</p>
       </div>
       <div class="grid-with-img">
-        <div style="display:flex; flex-direction:column; gap:8px;">
+        <div style="display:flex; flex-direction:column; gap:10px;">
           <div class="card cyan">
-            <h3>Lo que lee Kevin</h3>
-            <p>Separamos la ficción de la realidad: hoy existen robots bípedos como Ameca u Optimus, autos autónomos y ChatGPT. Lo que sigue siendo fantasía son los cerebros de antimateria y que un robot tenga alma de la nada. Al final, Sonny desactiva a VIKI demostrando libre albedrío y elige guiar a sus hermanos robots en paz.</p>
+            <h3>Realidad vs Ficción en 2026</h3>
+            <p><strong>Existe hoy:</strong> Robots bípedos (Optimus, Ameca), autos autónomos (Waymo) y LLMs (ChatGPT).<br><strong>Ficción:</strong> Cerebros de antimateria y robots con alma emergente espontánea.</p>
           </div>
           <div class="card">
             <h3>Cómo usamos la IA en el trabajo</h3>
-            <p>Usamos Gemini para la arquitectura técnica, Claude para las leyes éticas y ChatGPT para resumir escenas. Todo fue corregido y redactado por nosotros.</p>
+            <p>Usamos Gemini para la arquitectura técnica, Claude para las leyes éticas y ChatGPT para resumir escenas. Todo fue corregido y redactado por nosotros con criterio propio.</p>
           </div>
           <div class="card green">
-            <h3>💬 Cierre de Nicolás, Jessica y Alba</h3>
-            <div class="comment-box">
-              <strong>Cierre del equipo:</strong> "La gran conclusión de esta película es que la mejor Inteligencia Artificial no es la más poderosa ni la que intenta controlarnos, sino la que mejor ayuda a la humanidad a ser más justa, segura y libre."
-            </div>
+            <h3>Conclusión Final: Sonny Libre</h3>
+            <p>🎬 Al final, Sonny desactiva a VIKI demostrando libre albedrío y elige guiar a sus hermanos robots en paz.<br><br>💡 <strong>Mensaje final:</strong> La mejor Inteligencia Artificial no es la más poderosa ni la que domina, sino la que mejor ayuda a la humanidad a ser más justa, segura y libre.</p>
           </div>
         </div>
         <div class="img-box">
@@ -739,8 +659,6 @@
   <script>
     const slides = document.querySelectorAll('.slide');
     const counter = document.getElementById('counter');
-    const readerBadge = document.getElementById('readerBadge');
-    const commentBadge = document.getElementById('commentBadge');
     let currentIdx = 0;
 
     function showSlide(idx) {
@@ -749,8 +667,6 @@
       });
       currentIdx = idx;
       counter.textContent = `Diapositiva ${idx + 1} / ${slides.length}`;
-      readerBadge.textContent = "🎙️ LEE: " + (slides[idx].getAttribute('data-reader') || 'KEVIN GUTIÉRREZ');
-      commentBadge.textContent = "💬 COMENTA: " + (slides[idx].getAttribute('data-comment') || 'EQUIPO');
     }
 
     function nextSlide() {
