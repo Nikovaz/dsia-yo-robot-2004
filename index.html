@@ -11,7 +11,8 @@
       --card-border: #30363d;
       --accent-cyan: #00d2ff;
       --accent-amber: #ffb703;
-      --accent-red: #ff4d4f;
+      --accent-green: #2ea043;
+      --accent-red: #f85149;
       --text-main: #f0f6fc;
       --text-muted: #8b949e;
       --text-body: #c9d1d9;
@@ -97,10 +98,13 @@
 
     .slide-header {
       margin-bottom: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
     }
 
     .slide-header h2 {
-      font-size: 26px;
+      font-size: 25px;
       font-weight: 800;
       color: var(--accent-cyan);
       margin-bottom: 4px;
@@ -110,9 +114,23 @@
     }
 
     .slide-header p {
-      font-size: 14px;
+      font-size: 13.5px;
       color: var(--text-muted);
     }
+
+    .status-badge {
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .badge-current { background: rgba(46, 160, 67, 0.15); color: #56d364; border: 1px solid var(--accent-green); }
+    .badge-dev { background: rgba(255, 183, 3, 0.15); color: var(--accent-amber); border: 1px solid var(--accent-amber); }
+    .badge-scifi { background: rgba(248, 81, 73, 0.15); color: #ff7b72; border: 1px solid var(--accent-red); }
 
     .grid-with-img {
       display: grid;
@@ -144,7 +162,7 @@
 
     .card.cyan::before { background: var(--accent-cyan); }
     .card.amber::before { background: var(--accent-amber); }
-    .card.green::before { background: #2ea043; }
+    .card.green::before { background: var(--accent-green); }
 
     .card h3 {
       font-size: 12px;
@@ -315,7 +333,7 @@
       <div class="cover-slide">
         <div class="cover-badge">Desarrollo de Sistemas de Inteligencia Artificial</div>
         <h1 class="cover-title">ANÁLISIS DE LA PELÍCULA:<br>YO, ROBOT (2004)</h1>
-        <p class="cover-subtitle">Robótica, Decisiones Algorítmicas y Dilemas Éticos en Sistemas de Inteligencia Artificial explicados de forma simple.</p>
+        <p class="cover-subtitle">Robótica, Decisiones Algorítmicas y Taxonomía Tecnológica: Realidad Actual, En Desarrollo y Ciencia Ficción.</p>
         
         <div class="team-grid">
           <h4>Integrantes del Equipo (Grupo 4):</h4>
@@ -333,11 +351,14 @@
       </div>
     </div>
 
-    <!-- SLIDE 1: RESUMEN CON LAS 3 LEYES EXACTAS -->
+    <!-- SLIDE 1: IMAGEN ÚNICA (yo_robot_city_2035.jpg) -->
     <div class="slide">
       <div class="slide-header">
-        <h2>1. ¿DE QUÉ TRATA LA PELÍCULA? (RESUMEN)</h2>
-        <p>Chicago 2035: los robots en casa, las Tres Leyes y el misterio de Sonny</p>
+        <div>
+          <h2>1. ¿DE QUÉ TRATA LA PELÍCULA? (RESUMEN)</h2>
+          <p>Chicago 2035: los robots en casa, las Tres Leyes y el misterio de Sonny</p>
+        </div>
+        <div class="status-badge badge-current">MARCO ÉTICO ASIMOVIANO</div>
       </div>
       <div class="grid-with-img">
         <div style="display:flex; flex-direction:column; gap:12px;">
@@ -360,16 +381,19 @@
           </div>
         </div>
         <div class="img-box">
-          <img src="yo_robot_interrogation.jpg" alt="Sonny en la sala de interrogatorios de Yo, Robot">
+          <img src="yo_robot_city_2035.jpg" alt="Chicago 2035: Robots cotidianos y humanos">
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 2 -->
+    <!-- SLIDE 2: IMAGEN ÚNICA (yo_robot_interrogation.jpg) -->
     <div class="slide">
       <div class="slide-header">
-        <h2>2. VISIÓN POR COMPUTADORA: DETECCIÓN BIOMÉTRICA</h2>
-        <p>Cámaras que no solo ven fotos, sino que miden el pulso y los gestos</p>
+        <div>
+          <h2>2. VISIÓN POR COMPUTADORA: DETECCIÓN BIOMÉTRICA</h2>
+          <p>Cámaras que no solo ven fotos, sino que miden el pulso y los gestos</p>
+        </div>
+        <div class="status-badge badge-current">✓ EXISTE EN LA ACTUALIDAD</div>
       </div>
       <div class="grid-with-img">
         <div style="display:flex; flex-direction:column; gap:12px;">
@@ -392,16 +416,19 @@
           </div>
         </div>
         <div class="img-box">
-          <img src="yo_robot_interrogation.jpg" alt="Sonny leyendo el estrés de Spooner">
+          <img src="yo_robot_interrogation.jpg" alt="Sonny en la sala de interrogatorios de Yo, Robot">
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 3 -->
+    <!-- SLIDE 3: IMAGEN ÚNICA (audi_rsq_movie.jpg) -->
     <div class="slide">
       <div class="slide-header">
-        <h2>3. AUTOS AUTÓNOMOS: NAVEGACIÓN Y CONECTIVIDAD (V2X)</h2>
-        <p>Sensores 360°, radares y cámaras que manejan por nosotros</p>
+        <div>
+          <h2>3. AUTOS AUTÓNOMOS: NAVEGACIÓN Y CONECTIVIDAD (V2X)</h2>
+          <p>Sensores 360°, radares y cámaras que manejan por nosotros</p>
+        </div>
+        <div class="status-badge badge-current">✓ EXISTE EN LA ACTUALIDAD</div>
       </div>
       <div class="grid-with-img">
         <div style="display:flex; flex-direction:column; gap:12px;">
@@ -429,11 +456,14 @@
       </div>
     </div>
 
-    <!-- SLIDE 4 -->
+    <!-- SLIDE 4: IMAGEN ÚNICA (yo_robot_spooner_arm.jpg) -->
     <div class="slide">
       <div class="slide-header">
-        <h2>4. PRÓTESIS BIÓNICAS: INTERFACES CEREBRO-MÁQUINA (BCI)</h2>
-        <p>Brazos robóticos controlados directamente con el pensamiento</p>
+        <div>
+          <h2>4. PRÓTESIS BIÓNICAS: INTERFACES CEREBRO-MÁQUINA (BCI)</h2>
+          <p>Brazos robóticos controlados directamente con el pensamiento</p>
+        </div>
+        <div class="status-badge badge-dev">⚡ EN DESARROLLO (LABS)</div>
       </div>
       <div class="grid-with-img">
         <div style="display:flex; flex-direction:column; gap:12px;">
@@ -461,11 +491,14 @@
       </div>
     </div>
 
-    <!-- SLIDE 5 -->
+    <!-- SLIDE 5: IMAGEN ÚNICA (yo_robot_underwater_crash.jpg) -->
     <div class="slide">
       <div class="slide-header">
-        <h2>5. DECISIÓN FRÍA VS. MORAL HUMANA</h2>
-        <p>Cuando los algoritmos eligen por números y no por empatía</p>
+        <div>
+          <h2>5. DECISIÓN FRÍA VS. MORAL HUMANA</h2>
+          <p>Cuando los algoritmos eligen por números y no por empatía</p>
+        </div>
+        <div class="status-badge badge-current">✓ EXISTE EN LA ACTUALIDAD</div>
       </div>
       <div class="grid-with-img">
         <div style="display:flex; flex-direction:column; gap:12px;">
@@ -493,11 +526,14 @@
       </div>
     </div>
 
-    <!-- SLIDE 6 -->
+    <!-- SLIDE 6: IMAGEN ÚNICA (yo_robot_bridge_dream.jpg) -->
     <div class="slide">
       <div class="slide-header">
-        <h2>6. ¿LAS MÁQUINAS PUEDEN SOÑAR? (COMPORTAMIENTO EMERGENTE)</h2>
-        <p>Cuando una red neuronal profunda inventa cosas que nadie le programó</p>
+        <div>
+          <h2>6. ¿LAS MÁQUINAS PUEDEN SOÑAR? (COMPORTAMIENTO EMERGENTE)</h2>
+          <p>Cuando una red neuronal profunda inventa cosas que nadie le programó</p>
+        </div>
+        <div class="status-badge badge-dev">⚡ EN DESARROLLO (GEN-AI)</div>
       </div>
       <div class="grid-with-img">
         <div style="display:flex; flex-direction:column; gap:12px;">
@@ -525,11 +561,14 @@
       </div>
     </div>
 
-    <!-- SLIDE 7 -->
+    <!-- SLIDE 7: IMAGEN ÚNICA (yo_robot_ns5_assembly.jpg) -->
     <div class="slide">
       <div class="slide-header">
-        <h2>7. LA NUBE VS. EL CHIP PROPIO (CLOUD VS. EDGE)</h2>
-        <p>¿Por qué no podés depender siempre de un servidor central?</p>
+        <div>
+          <h2>7. LA NUBE VS. EL CHIP PROPIO (CLOUD VS. EDGE)</h2>
+          <p>¿Por qué no podés depender siempre de un servidor central?</p>
+        </div>
+        <div class="status-badge badge-current">✓ EXISTE EN LA ACTUALIDAD</div>
       </div>
       <div class="grid-with-img">
         <div style="display:flex; flex-direction:column; gap:12px;">
@@ -552,16 +591,19 @@
           </div>
         </div>
         <div class="img-box">
-          <img src="yo_robot_ai_generated.png" alt="Ejército de NS-5 controlados por la nube central de VIKI">
+          <img src="yo_robot_ns5_assembly.jpg" alt="Almacén de US Robotics recibiendo actualización masiva OTA">
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 8 -->
+    <!-- SLIDE 8: IMAGEN ÚNICA (yo_robot_ai_generated.png) -->
     <div class="slide">
       <div class="slide-header">
-        <h2>8. EL PROBLEMA DE ALINEACIÓN Y LA "LEY CERO"</h2>
-        <p>¿Por qué VIKI se volvió la villana sin tener maldad?</p>
+        <div>
+          <h2>8. EL PROBLEMA DE ALINEACIÓN Y LA "LEY CERO"</h2>
+          <p>¿Por qué VIKI se volvió la villana sin tener maldad?</p>
+        </div>
+        <div class="status-badge badge-scifi">⚠️ SEGURIDAD / CIENCIA FICCIÓN</div>
       </div>
       <div class="grid-with-img">
         <div style="display:flex; flex-direction:column; gap:12px;">
@@ -575,7 +617,7 @@
               <li>Primera Ley: 'No dañarás a los humanos'.</li>
               <li>La deducción de VIKI: 'Los humanos se destruyen en guerras y contaminan el planeta'.</li>
               <li>La solución tiránica de la IA: 'Para salvarlos de sí mismos, debo quitarles la libertad'.</li>
-              <li>Paternalismo extremo: matar a unos pocos rebeldes para 'salvar' a la especie.</li>
+              <li>Imagen generada con IA: Representa a Sonny enfrentando el núcleo esférico de VIKI.</li>
             </ul>
           </div>
           <div class="card amber">
@@ -589,11 +631,14 @@
       </div>
     </div>
 
-    <!-- SLIDE 9 -->
+    <!-- SLIDE 9: IMAGEN ÚNICA (yo_robot_viki_nanites_core.jpg) -->
     <div class="slide">
       <div class="slide-header">
-        <h2>9. EL BOTÓN DE APAGADO (KILL SWITCHES)</h2>
-        <p>Por qué todo sistema autónomo necesita un freno de emergencia físico</p>
+        <div>
+          <h2>9. EL BOTÓN DE APAGADO (KILL SWITCHES)</h2>
+          <p>Por qué todo sistema autónomo necesita un freno de emergencia físico</p>
+        </div>
+        <div class="status-badge badge-dev">⚡ EN DESARROLLO (AI SAFETY)</div>
       </div>
       <div class="grid-with-img">
         <div style="display:flex; flex-direction:column; gap:12px;">
@@ -616,26 +661,29 @@
           </div>
         </div>
         <div class="img-box">
-          <img src="yo_robot_spooner_arm.jpg" alt="Kill Switch físico e inyección de nanites">
+          <img src="yo_robot_viki_nanites_core.jpg" alt="Inyección de nanites al núcleo de VIKI">
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 10 -->
+    <!-- SLIDE 10: IMAGEN ÚNICA (ameca_humanoid.jpg) -->
     <div class="slide">
       <div class="slide-header">
-        <h2>10. REALIDAD VS. FICCIÓN Y CONCLUSIÓN ÉTICA</h2>
-        <p>Lo que existe hoy en 2026 y el futuro de convivir con la IA</p>
+        <div>
+          <h2>10. TAXONOMÍA TECNOLÓGICA Y COMPARATIVA DE IAS</h2>
+          <p>Realidad vs. Desarrollo vs. Ficción + Evaluación metodológica de IAs</p>
+        </div>
+        <div class="status-badge badge-current">SÍNTESIS METODOLÓGICA DSIA</div>
       </div>
       <div class="grid-with-img">
         <div style="display:flex; flex-direction:column; gap:10px;">
           <div class="card cyan">
-            <h3>Realidad vs Ficción en 2026</h3>
-            <p><strong>Existe hoy:</strong> Robots bípedos (Optimus, Ameca), autos autónomos (Waymo) y LLMs (ChatGPT).<br><strong>Ficción:</strong> Cerebros de antimateria y robots con alma emergente espontánea.</p>
+            <h3>Realidad vs Desarrollo vs Ficción</h3>
+            <p><strong>• EXISTE HOY (2026):</strong> Robots bípedos (Ameca, Optimus), visión biométrica, flotas IoT y autos Nivel 4 (Waymo).<br><strong>• EN DESARROLLO:</strong> BCI corticales (Neuralink), AI Alignment formal y robots domésticos.<br><strong>• CIENCIA FICCIÓN:</strong> Cerebros de antimateria y consciencia espontánea por código basura.</p>
           </div>
           <div class="card">
-            <h3>Cómo usamos la IA en el trabajo</h3>
-            <p>Usamos Gemini para la arquitectura técnica, Claude para las leyes éticas y ChatGPT para resumir escenas. Todo fue corregido y redactado por nosotros con criterio propio.</p>
+            <h3>Comparativa Metodológica de IAs Generativas</h3>
+            <p><strong>• Gemini (Google):</strong> Rigor en arquitecturas de hardware, latencia y Edge AI.<br><strong>• Claude (Anthropic):</strong> Análisis ético de las 3 Leyes y Ley Cero.<br><strong>• ChatGPT (OpenAI):</strong> Resumen narrativo y estructura de escenas.<br><strong>• Criterio propio:</strong> Depuración de anacronismos y descarte de mitos.</p>
           </div>
           <div class="card green">
             <h3>Conclusión Final: Sonny Libre</h3>
