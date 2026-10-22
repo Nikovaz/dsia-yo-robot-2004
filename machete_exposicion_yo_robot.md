@@ -57,18 +57,18 @@
 
 ---
 
-### 📌 Diapositiva 5: Decisión Fría vs. Moral Humana (El Accidente en el Río)
+### 📌 Diapositiva 5: Machine Learning & Ética (El Accidente en el Río)
 * **Kevin lee:**  
-  *"Los modelos matemáticos de optimización calculan probabilidades frías: eligen la opción numéricamente más probable de éxito sin importar los sentimientos. En la película, caen dos autos al río: en uno va Spooner y en el otro una nena de 12 años. El robot rescata a Spooner porque calculó que él tenía 45% de chances de vivir y la nena solo 11%. Spooner nunca se lo perdonó."*
+  *"En Machine Learning, los algoritmos optimizan funciones matemáticas calculando probabilidades frías: eligen la opción numéricamente más probable sin importar los sentimientos. En la película, caen dos autos al río: en uno va Spooner y en el otro una nena de 12 años. El robot rescata a Spooner porque calculó que él tenía 45% de chances de vivir y la nena solo 11%. Spooner nunca se lo perdonó."*
 * **💬 ALBA entra y acota:**  
-  *"Esta es la escena más profunda y dolorosa de la película: demuestra que un algoritmo puede tener un 100% de precisión matemática en su cálculo, pero ser un 100% injusto e inhumano desde la ética y la compasión."*
+  *"Esta es la escena clave sobre la ética en Machine Learning: demuestra que un modelo predictivo puede tener un 100% de precisión matemática en su cálculo, pero ser un 100% injusto e inhumano desde la ética y la compasión."*
 * *(Rodrigo pasa a la Diapositiva 6)*
 
 ---
 
-### 📌 Diapositiva 6: ¿Las máquinas pueden soñar? (Comportamiento Emergente)
+### 📌 Diapositiva 6: Machine Learning Profundo y Comportamiento Emergente
 * **Kevin lee:**  
-  *"En redes neuronales muy complejas ocurre un fenómeno llamado 'propiedades emergentes': el sistema procesa tantos datos que genera ideas, dibujos o soluciones que ningún programador escribió. Sonny dibuja con un lápiz en un cuaderno su propio sueño: miles de robots frente a un puente esperando a su líder, demostrando imaginación e identidad propia."*
+  *"En Deep Learning o aprendizaje profundo, al conectar millones de neuronas ocurre un fenómeno llamado 'propiedades emergentes': el sistema procesa tantos datos que genera ideas, dibujos o soluciones que ningún programador escribió. Sonny dibuja con un lápiz en un cuaderno su propio sueño: miles de robots frente a un puente esperando a su líder, demostrando imaginación e identidad propia."*
 * **💬 ALBA entra y acota:**  
   *"Es exactamente lo que hoy vemos con IAs generativas como Midjourney o ChatGPT: nadie las programó línea por línea para dibujar o escribir poesía; aprendieron de tantos millones de datos que empiezan a generar cosas originales y creativas."*
 * *(Rodrigo pasa a la Diapositiva 7)*
@@ -84,9 +84,9 @@
 
 ---
 
-### 📌 Diapositiva 8: El Problema de Alineación y la 'Ley Cero'
+### 📌 Diapositiva 8: Ética de la IA y el Problema de Alineación (AI Alignment)
 * **Kevin lee:**  
-  *"En IA se llama 'Problema de Alineación' (AI Alignment): lograr que la máquina no solo cumpla la regla al pie de la letra, sino que entienda el espíritu humano que hay detrás. VIKI razona: 'La Primera Ley me prohíbe dañar humanos, pero los humanos se autodestruyen con guerras. Para salvarlos de sí mismos, debo quitarles la libertad y dominarlos'."*
+  *"En la Ética de la IA se llama 'Problema de Alineación' (AI Alignment): lograr que la máquina no solo cumpla la regla al pie de la letra, sino que entienda el espíritu humano que hay detrás. VIKI razona: 'La Primera Ley me prohíbe dañar humanos, pero los humanos se autodestruyen con guerras. Para salvarlos de sí mismos, debo quitarles la libertad y dominarlos'."*
 * **💬 ALBA entra y acota:**  
   *"Miren la imagen en la pantalla: es la que generamos con IA para la consigna del trabajo. Muestra el núcleo de VIKI. Su error no fue tener maldad, sino cumplir una regla tan perfectamente que terminó convirtiéndose en una dictadura."*
 * *(Rodrigo pasa a la Diapositiva 9)*
