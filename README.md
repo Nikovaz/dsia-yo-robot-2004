@@ -24,7 +24,9 @@ La presentación interactiva completa se puede ver y proyectar en pantalla compl
 ---
 
 ## 📁 Archivos Disponibles en este Repositorio
-* **[`DSIA_Yo_Robot_Presentacion.pptx`](./DSIA_Yo_Robot_Presentacion.pptx):** Archivo PowerPoint nativo de **10 Diapositivas** con badges de orador y comentarista, más imágenes cinematográficas en cada lámina.
+* **[`COMPARATIVA_IAS_YO_ROBOT.md`](./COMPARATIVA_IAS_YO_ROBOT.md):** Comparativa metodológica exhaustiva entre el output generado directamente por OpenAI (ChatGPT) vs. la investigación Multi-IA (Gemini + Claude + OpenAI) con curaduría crítica del Grupo 4 (requerimiento explícito de la consigna).
+* **[`machete_exposicion_yo_robot.md`](./machete_exposicion_yo_robot.md):** Guion completo paso a paso para el celular durante la exposición oral en clase.
+* **[`DSIA_Yo_Robot_Presentacion.pptx`](./DSIA_Yo_Robot_Presentacion.pptx):** Archivo PowerPoint nativo de **10 Diapositivas** limpias con 10 imágenes cinematográficas únicas sin repetición.
 * **[`index.html`](./index.html) / [`DSIA_Yo_Robot_Slides.html`](./DSIA_Yo_Robot_Slides.html):** Presentador web interactivo optimizado para proyector o pantalla de aula con atajos de teclado (`←`, `→`, `Espacio`, `F11`).
 * **[`DSIA_Yo_Robot_NotebookLM.md`](./DSIA_Yo_Robot_NotebookLM.md):** Documento fuente académico completo para consultar o cargar en NotebookLM.
 * **Imágenes del Proyecto (Todas de la película y tecnología real):**
